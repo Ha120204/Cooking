@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed-dim":"#ffb59d","error-container":"#ffdad6","on-secondary-fixed-variant":"#10512d","on-secondary":"#ffffff","outline-variant":"#dec0b7","on-tertiary":"#ffffff","primary-fixed":"#ffdbd0","on-primary-fixed":"#390c00","surface-variant":"#ebe0db","error":"#ba1a1a","tertiary-container":"#9f6c00","inverse-surface":"#352f2c","inverse-on-surface":"#f9efe9","secondary-container":"#b0f2bf","outline":"#8a726a","on-secondary-container":"#337048","on-surface":"#1f1b18","on-primary-container":"#fffeff","on-secondary-fixed":"#00210e","surface-container-lowest":"#ffffff","on-background":"#1f1b18","on-error":"#ffffff","surface-container":"#f7ece7","background":"#fff8f5","on-tertiary-container":"#ffffff","surface":"#fff8f5","on-surface-variant":"#57423b","tertiary":"#7f5500","secondary-fixed-dim":"#95d5a5","on-tertiary-fixed-variant":"#614000","surface-container-highest":"#ebe0db","secondary":"#2d6a43","primary-container":"#c2542d","surface-container-high":"#f1e6e1","surface-container-low":"#fcf1ec","surface-bright":"#fff8f5","surface-dim":"#e2d8d3","secondary-fixed":"#b0f2bf","surface-tint":"#a33e18","on-primary-fixed-variant":"#832701","on-error-container":"#93000a","on-primary":"#ffffff","tertiary-fixed-dim":"#ffba45","inverse-primary":"#ffb59d","primary":"#a13c17","on-tertiary-fixed":"#281800","tertiary-fixed":"#ffddb0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-md":"1rem","space-xl":"2.5rem","margin-md":"2rem","space-lg":"1.5rem","gutter-sm":"1rem","margin-lg":"3.5rem","margin":"1rem","space-sm":"0.5rem","gutter-lg":"2rem","space-xs":"0.25rem"},"fontFamily":{"body-cooking-step":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"display-mobile":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"headline-lg-mobile":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"display":["Be Vietnam Pro"]},"fontSize":{"body-cooking-step":["20px",{"lineHeight":"32px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"42px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"display":["44px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(78,64,53,0.06)]"><div class="h-20 max-w-[1240px] mx-auto px-gutter-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><a class="flex items-center gap-space-sm group focus:outline-none focus:ring-2 focus:ring-primary rounded-lg" data-path="cong-thuc" href="#"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">soup_kitchen</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Bếp Nhà Mình</span></a><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg"><a class="min-h-[48px] px-space-md py-space-sm flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded-lg" data-path="cong-thuc" href="#">Công thức</a><a class="min-h-[48px] px-space-md py-space-sm flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded-lg" data-path="thuc-don-tuan" href="#">Thực đơn tuần</a><a class="min-h-[48px] px-space-md py-space-sm flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded-lg" data-path="thu-thach-tuan" href="#">Thử thách tuần</a><a class="min-h-[48px] px-space-md py-space-sm flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded-lg" data-path="hoi-bep" href="#">Hỏi bếp</a></nav></div><div class="flex items-center gap-space-md"><a class="min-h-[48px] px-space-md py-space-sm hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg text-secondary border border-secondary/30 rounded-lg hover:bg-secondary/10 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-secondary transition-all" data-path="hom-nay-an-gi" href="#">Hôm nay ăn gì?</a><a class="min-h-[48px] px-space-lg py-space-sm inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-primary hover:text-on-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all active:scale-[0.98]" data-path="gop-cong-thuc" href="#"><span class="material-symbols-outlined text-[20px]">add</span><span>Góp công thức</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1240px] mx-auto px-gutter-lg py-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumb & Tiêu đề -->
+<section class="flex flex-col gap-space-xs">
+<nav aria-label="Đường dẫn trang" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="min-h-[44px] flex items-center hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-space-xs" href="#" style="color: #9E3F1D;">Trang chủ</a>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-on-surface font-label-md">Công thức</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Công thức món ngon gia đình</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Chọn món theo danh mục, thời gian vào bếp và độ khó để có mâm cơm trọn vị, tròn đầy tình thương quê nhà.
+          </p>
+</div>
+<div class="hidden md:flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-xl text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">local_dining</span>
+<span class="font-label-sm text-label-sm">Hơn 450+ món nấu tại nhà</span>
+</div>
+</div>
+</section>
+<!-- Thanh tìm kiếm trung tâm lớn -->
+<section class="w-full">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-md flex flex-col sm:flex-row items-center gap-space-sm">
+<div class="relative flex-1 w-full flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline text-[24px] pointer-events-none">search</span>
+<input class="w-full min-h-[52px] pl-12 pr-12 bg-transparent text-on-surface font-body-lg text-body-lg placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container rounded-lg" id="searchInput" placeholder="Tìm món canh, món kho, nguyên liệu..." type="text" value="canh"/>
+<button aria-label="Xóa nội dung tìm kiếm" class="absolute right-space-sm min-h-[44px] min-w-[44px] flex items-center justify-center text-outline hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container rounded-lg" onclick="document.getElementById('searchInput').value=''; document.getElementById('searchInput').focus();" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<button class="w-full sm:w-auto min-h-[48px] px-space-xl flex items-center justify-center gap-space-xs text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:opacity-95 active:scale-[0.98] transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-container" style="background-color: #C2542D;" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Tìm kiếm</span>
+</button>
+</div>
+</section>
+<!-- Bố cục 2 cột (Desktop Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Cột trái: Sidebar Bộ Lọc cố định (Sticky Filter Panel) -->
+<aside class="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm">
+<!-- Header bộ lọc -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Bộ lọc tìm kiếm</span>
+</div>
+<button class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" style="color: #9E3F1D;" type="button">
+            Thiết lập lại
+          </button>
+</div>
+<!-- Toggle: Chỉ món đã lưu -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container rounded-lg">
+<span class="font-label-lg text-label-lg text-on-surface select-none">Chỉ món đã lưu</span>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[48px]">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[14px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Nhóm Danh mục món ăn -->
+<fieldset class="flex flex-col gap-space-xs pt-space-sm">
+<legend class="font-label-lg text-label-lg text-on-surface mb-space-xs font-semibold">Danh mục món ăn</legend>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Tất cả món</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg bg-surface-container-high transition-colors group">
+<input checked="" class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex-1">Món canh</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary/15 text-secondary">18</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Món chính</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Món kho</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Món xào</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Món luộc</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-2 focus:ring-primary rounded-full" name="category" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Món ăn sáng</span>
+</label>
+</fieldset>
+<!-- Nhóm Độ khó -->
+<fieldset class="flex flex-col gap-space-xs pt-space-sm">
+<legend class="font-label-lg text-label-lg text-on-surface mb-space-xs font-semibold">Độ khó nấu nướng</legend>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input checked="" class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface flex-1">Dễ nấu</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface flex-1">Trung bình</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface flex-1">Khó (Kỳ công)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1</span>
+</label>
+</fieldset>
+<!-- Nhóm Thời gian chuẩn bị -->
+<fieldset class="flex flex-col gap-space-xs pt-space-sm">
+<legend class="font-label-lg text-label-lg text-on-surface mb-space-xs font-semibold">Thời gian chuẩn bị</legend>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">≤ 15 phút</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input checked="" class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface font-semibold flex-1">≤ 30 phút</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary/15 text-secondary">11</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">≤ 60 phút</span>
+</label>
+<label class="flex items-center gap-space-sm min-h-[44px] px-space-xs cursor-pointer rounded-lg hover:bg-surface-container transition-colors group">
+<input class="w-5 h-5 rounded accent-secondary text-secondary focus:ring-2 focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Trên 60 phút</span>
+</label>
+</fieldset>
+<!-- Hộp mẹo nhỏ gian bếp ấm cúng -->
+<div class="mt-space-sm p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Mẹo bếp nhà:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Nấu canh rau ngót nên vò nhẹ lá để rau mềm ngọt nước hơn!
+            </p>
+</div>
+</div>
+</aside>
+<!-- Cột phải: Kết quả tìm kiếm & Lưới công thức -->
+<section class="lg:col-span-8 xl:col-span-9 flex flex-col gap-space-md">
+<!-- Thanh trạng thái kết quả -->
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">
+              Tìm thấy <strong class="text-primary font-semibold">18 món canh</strong> thơm ngon
+            </span>
+<!-- Dropdown sắp xếp -->
+<div class="flex items-center gap-space-xs self-start md:self-auto">
+<label class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap" for="sortSelect">Sắp xếp theo:</label>
+<select class="min-h-[44px] px-space-sm bg-surface-container text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="sortSelect">
+<option selected="">Mới nhất</option>
+<option>Được nấu nhiều nhất</option>
+<option>Thời gian nhanh nhất</option>
+</select>
+</div>
+</div>
+<!-- Active chips -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Món canh</span>
+<button aria-label="Bỏ chọn danh mục món canh" class="min-h-[44px] min-w-[28px] inline-flex items-center justify-center text-outline hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary rounded" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Độ khó: Dễ</span>
+<button aria-label="Bỏ chọn độ khó dễ" class="min-h-[44px] min-w-[28px] inline-flex items-center justify-center text-outline hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary rounded" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Thời gian: ≤30 phút</span>
+<button aria-label="Bỏ chọn thời gian" class="min-h-[44px] min-w-[28px] inline-flex items-center justify-center text-outline hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary rounded" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</span>
+<button class="min-h-[44px] px-space-sm flex items-center font-label-sm text-label-sm hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded ml-auto" style="color: #9E3F1D;" type="button">
+              Xóa tất cả
+            </button>
+</div>
+</div>
+<!-- Lưới công thức 3 cột (Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter-sm">
+<!-- Thẻ 1 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Nồi canh chua cá lóc truyền thống nghi ngút khói đặt trong nồi đất mộc mạc, kèm cà chua đỏ rực, đậu bắp xanh mướt, ngò gai thơm lành, ánh sáng ấm cúng của bếp ăn gia đình Việt Nam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3UlcfgxEoXsLlzUzVBA0ZBys9BQwywjkds0NSvfepXrKchgjhnbXkNH9XCElE-co5-BmLoLddE9qUSsXOB2_Gp2Z1zd-n0No45eUs-uAO8SP0GWBtYz167vKWRmlviVlERBcjnCHUolRyHDz2KPTe-czZQLXkK3_r8S5HDbrPw70SAXjSL0Zx_39LCsBjoMGII8kCOI2jz6_fK5g5hgATFKr_o65RZeALfV1YYWem"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #CanhThanhNhiệt
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    35 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh chua cá kiểu bếp nhà
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (128 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 2 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tô canh bí đỏ nấu thịt bằm vàng ươm rắc hành lá thái nhỏ và tiêu đen xay mịn, khói bốc nhẹ nhàng trong không gian phòng bếp gỗ tự nhiên ấm cúng." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQou4gmZ63Z4fLW67_1t_FnEGVh6ZUnmV-Sz58mnfRxzvYPXha4GZ2tBCwyfRJAXZ-A89h3q2wo0adN9tW25Th9n2JaOnOizML6iWWyJm-cHC7cpV3TP_HSwq5Sv9sAdp8LH4GkEU8bBBKG12cT85oyMTih13UdP-k1oTD9Gsfg4Fi5vUpSL0lKmZ5u0v7ZyGe-ZQNKzV1maqJUaJy7-ZIZuV3f9LiLV7lHmKwm9kJ"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #CanhBổDưỡng
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    20 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh bí đỏ thịt bằm
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8 (95 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 3 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tô canh rau ngót tươi xanh mướt nấu cùng thịt nạc dăm băm nhuyễn, nước canh trong veo thanh ngọt đặt trên mâm mây tre đan cổ truyền." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_RIkSRdnd7qy6swgQvclAHyFZ-LUjPKHBnqSkkKToLKxhA9UN5NVIa01-y9gUwob7T7Qkg25jXkNhR_GVkIxGIZf3b_1sW-89P90d6IOoFnV2lHSsh6mPVDqahVzr_HJalcvT_6p2rUZqRhYusOqQyXSAEKXKV41JyA_VDtJzDngtI06dbC8tisbyeI5F_avr-S7kEcgELGeGcPUpEmNuydl-Zk7PX2l376K9W7Bl"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #CơmHè
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    15 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh rau ngót thịt nạc
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (112 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 4 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Bát canh cua đồng đóng váng gạch cua nâu béo ngậy nấu mồng tơi xanh thẫm và mướp hương thái lát nghiêng thanh mát cho bữa trưa mùa hè Việt Nam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDWm-dHopB2STRnb39gEW0EB3OTEVmCj7E3PtHAv_yvzhvxv3z_Dna2zLI_AgcsJeLdBgv4ODwGo2j2yIg25Owkic3yHG2IMTxiVnGXxlR9VtDFfK2n3AFGLFKbwHhjYOkvxB6TIYYMGSoLLs9tK4s4Nu9wxwE3KwOsv5aPrD_NQlJnZgI5twvqjUCJS3SJ_6nprjwyPEuf9f9Q_uOzRT0OYBfUlLmVnJO8Wieoaw"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #ĐậmVịQuê
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    25 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh cua đồng mồng tơi mướp
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0 (210 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 5 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tô canh sườn non hầm cùng những quả sấu xanh cạo vỏ, nước dùng trong vắt tỏa hương chua dịu đặc trưng hương vị Hà Nội đầu mùa hè." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4LkRf-br1sOZUqYua4XjHlCeYJtaIw0hhjVlcpERRWKGaY3vC00Oc6JpdO4LEJVyJ_-3JyjyvPbUk8V0v_Win_EVmY_F463Qe0ail8FFUYwZYd37fEXd-S0It8Jzq_YWt4u1n6nnCkPZPzPsvTS8WskHVwd0h1b32etm4fuHj8hhQa-wMnQ1zpk_L9A7AVZwk62jPeVQBgACbyCTwNwI4ZwB4kfMg_9n7FR79bqTK"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #CanhChua
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    30 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh sườn non nấu sấu
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7 (88 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 6 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Món canh khổ qua nhồi thịt bằm thắt cọng hành chần xinh xắn, nước dùng trong thơm phức với ngò rí và tiêu sọ, mang ý nghĩa xua đi nỗi khó nhọc gia đình." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8w8wUrNtFYp4YLqMQRzP6SdZ-zmiMWaXifEHmcJ9l0V0UpUE2EYeN3inUqpIvgaYeZWktW-uVy2Mtk5-eGaJey0IzqIqdgt43AbXVYlkeWwDE74erZAv6eM6YTNLLyDCnJRTPEhuv5sisfpwOlcaYkjHQVXjwx4wxgWZWAbf8lO5QbjByEBG91uN430u5YEgiM7EphEwKuB0eDt6BP2G0IStZbYs9WPz5flKt1wLX"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #MâmCơmẤm
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    30 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh khổ qua nhồi thịt bằm
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8 (104 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 7 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tô canh cải ngọt non tơ nấu cùng tôm đồng tươi bóc vỏ giã dập, nước canh trong veo ngào ngạt mùi gừng cay dịu và hạt tiêu ấm áp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbcaKKCiVio6tkwalF-IDlrGIvJsbvDSPZXEOvb83VKBVsBvkNhmS4tDg8b966Le3QlOYJZ-7BlQ1wBQYPM-IdwDcUk2GcFRmDXxdH2cL60joXeHFU6D-_uJC5ZM5XGSpeJNbQEv0aBh9avNiUoE9swPlVcbIdY2KbBXI3Lqo1zCQHj8yLLqpA2_lmLzdioC8nd-rAgAXp4EsWXMpEQaMKFMp_oMMdeHhG79UkBVqx"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #NhanhGọn
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    15 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh cải ngọt nấu tôm tươi
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8 (76 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 8 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Nồi canh nghêu nấu chua cùng cà chua bi mọng nước, dọc mùng giòn sần sật và lá thì là thái nhỏ bồng bềnh thơm nức mũi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU_NbhSBEtR9HWYAXB4u0hb6FwBSP--kxRVW-qONDsgiYz4v5FEM98qw8DBGcg9MWtyDexbC-erQ2SwmDY3ezrtUBUkawTr3UM-evU2TLErysYvJBMydb19vVf9tL6Dee8a79TjPkdf7mKL5F2419m5tbUd9WysuE9kj9nOnaXMSABGmXG3yNbXQ1LpX1_sOx6VXXfEQbSKfJXqnvoFGZki-FPxAQfpa-PxKfBbALd"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #HảiSản
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    20 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh nghêu nấu thì là chua dịu
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (135 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+<!-- Thẻ 9 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tô canh gà đồi chặt khúc nấu lá giang rừng xanh đậm vò dập, nổi bật vài lát ớt hiểm đỏ cay nồng kích thích vị giác trên bàn ăn mộc mạc." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuE642CEohQAMEQrPacxvpmioOm4HEEG-wt99aQqRjCVGWLEzQMyV4Dv_Z5lN3tRU7TMVPp_bAb-0JXz8VFcJvwjRr8FXVJsQIfejT7K-jY1J3nxboi5xep7yXNTI4OkpWe1ok8l6rkbZIi0sx_c6HOUbjKYy6dTkRaIbdB9rfa9jfrGbpsGhdVgSwlZbhbM_TI7DoJYXN6nQ7KH2CEog6JqceHHNTIdyHDXY7KO3w"/>
+<span class="absolute bottom-space-xs left-space-xs px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+                #ĐặcSản
+              </span>
+<button aria-label="Lưu vào danh sách yêu thích" class="absolute top-space-xs right-space-xs min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary shadow hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                    30 phút
+                  </span>
+<span>•</span>
+<span class="text-secondary font-medium">Dễ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                  Canh gà nấu lá giang chua cay
+                </h3>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (160 đánh giá)</span>
+</div>
+<a class="min-h-[44px] px-space-xs flex items-center font-label-md text-label-md hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" style="color: #9E3F1D;">
+                  Xem cách nấu →
+                </a>
+</div>
+</div>
+</article>
+</div>
+<!-- Nút Xem thêm món canh khác -->
+<div class="w-full pt-space-md pb-space-sm flex justify-center">
+<button class="w-full sm:w-auto min-h-[48px] px-space-xl py-space-sm flex items-center justify-center gap-space-xs bg-surface-container-low hover:bg-surface-container font-label-lg text-label-lg rounded-xl shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary" style="color: #9E3F1D;" type="button">
+<span>Xem thêm 9 món canh khác</span>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction: Tim lưu món ăn
+  document.querySelectorAll('article button[aria-label*="yêu thích"]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const icon = this.querySelector('.material-symbols-outlined');
+      const isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+      if (isFilled) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        this.classList.remove('text-primary');
+        this.classList.add('text-on-surface-variant');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        this.classList.remove('text-on-surface-variant');
+        this.classList.add('text-primary');
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(78,64,53,0.03)] mt-space-xl"><div class="max-w-[1240px] mx-auto px-gutter-lg py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg pb-space-lg"><div class="md:col-span-6 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">soup_kitchen</span></div><span class="font-headline-sm text-headline-sm text-primary">Bếp Nhà Mình</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Bếp Nhà Mình - Góc nhỏ sẻ chia yêu thương qua từng món ăn gia đình Việt ấm cúng.</p></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface">Khám phá &amp; Trợ giúp</span><div class="flex flex-col gap-space-xs"><a class="min-h-[44px] flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" data-path="thuc-don-tuan" href="#">Thực đơn tuần</a><a class="min-h-[44px] flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" data-path="hoi-bep" href="#">Hỏi bếp &amp; Góp ý</a><a class="min-h-[44px] flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" data-path="chinh-sach-rieng-tu" href="#">Chính sách riêng tư</a></div></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface">Liên hệ tâm tình</span><div class="flex flex-col gap-space-xs"><a class="min-h-[44px] flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="mailto:lienhe@bepnhaminh.vn"><span class="material-symbols-outlined text-[18px]">mail</span><span>lienhe@bepnhaminh.vn</span></a><div class="min-h-[44px] flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">eco</span><span>Bếp Việt mộc mạc</span></div></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left bg-surface-container/50 px-space-md py-space-sm rounded-lg"><p class="font-body-sm text-body-sm text-on-surface-variant">Website cá nhân, phi thương mại</p><p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Bếp Nhà Mình. Gìn giữ hương vị quê nhà.</p></div></div></footer></body></html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title">
+  <title id="title">Ảnh minh họa đậu hũ sốt cà</title>
+  <rect width="800" height="600" fill="#F5EFEB"/>
+  <circle cx="400" cy="278" r="202" fill="#FFFFFF" stroke="#E6DED6" stroke-width="18"/>
+  <circle cx="400" cy="278" r="160" fill="#C2542D"/>
+  <rect x="296" y="184" width="97" height="92" rx="17" fill="#F9E2B6" transform="rotate(-12 296 184)"/>
+  <rect x="422" y="196" width="102" height="90" rx="17" fill="#F9E2B6" transform="rotate(10 422 196)"/>
+  <rect x="340" y="304" width="99" height="80" rx="17" fill="#F9E2B6" transform="rotate(8 340 304)"/>
+  <path d="M270 314c39-28 64-25 95 1M446 323c35-33 61-28 93-9" fill="none" stroke="#3E7B52" stroke-width="17" stroke-linecap="round"/>
+  <text x="400" y="531" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#26211E">Đậu hũ sốt cà</text>
+  <text x="400" y="565" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#635952">Ảnh minh họa — sẽ thay bằng ảnh có bản quyền phù hợp</text>
+</svg>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;font-family:'Be Vietnam Pro',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#832701","on-tertiary":"#ffffff","on-secondary-container":"#337048","error":"#ba1a1a","on-secondary-fixed":"#00210e","secondary-container":"#b0f2bf","inverse-surface":"#352f2c","on-background":"#1f1b18","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface-dim":"#e2d8d3","on-secondary-fixed-variant":"#10512d","tertiary":"#7f5500","inverse-on-surface":"#f9efe9","on-error":"#ffffff","tertiary-fixed-dim":"#ffba45","outline-variant":"#dec0b7","on-surface":"#1f1b18","surface-tint":"#a33e18","secondary":"#2d6a43","surface-container-high":"#f1e6e1","on-primary-container":"#fffeff","on-tertiary-fixed-variant":"#614000","surface":"#fff8f5","secondary-fixed-dim":"#95d5a5","surface-variant":"#ebe0db","secondary-fixed":"#b0f2bf","background":"#fff8f5","tertiary-fixed":"#ffddb0","on-primary":"#ffffff","tertiary-container":"#9f6c00","on-secondary":"#ffffff","on-tertiary-fixed":"#281800","primary-fixed-dim":"#ffb59d","on-surface-variant":"#57423b","surface-container-highest":"#ebe0db","primary-container":"#c2542d","primary":"#a13c17","on-error-container":"#93000a","outline":"#8a726a","on-tertiary-container":"#ffffff","inverse-primary":"#ffb59d","on-primary-fixed":"#390c00","surface-bright":"#fff8f5","surface-container-low":"#fcf1ec","surface-container":"#f7ece7","primary-fixed":"#ffdbd0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","gutter-sm":"1rem","margin":"1rem","margin-lg":"3.5rem","gutter-lg":"2rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter":"1.5rem","margin-md":"2rem","space-md":"1rem"},"fontFamily":{"label-md":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"body-cooking-step":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"headline-lg-mobile":["Be Vietnam Pro"],"display-mobile":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"display":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"]},"fontSize":{"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"42px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-cooking-step":["20px",{"lineHeight":"32px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"display":["44px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(78,64,53,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[26px]">soup_kitchen</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Bếp Nhà Mình</span></div><div class="flex items-center gap-space-xs"><button aria-label="Tìm món" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Tài khoản" class="w-11 h-11 flex items-center justify-center rounded-full"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_4px_rgba(194,84,45,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Top Section / Warm Community Greeting -->
+<section class="px-gutter-sm pt-space-sm pb-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm tracking-wide">
+<span class="text-primary text-[14px]">✦</span>
+<span>CHUYỆN BẾP NHÀ MÌNH</span>
+</div>
+<div class="mt-space-sm flex items-start justify-between gap-space-sm">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Hỏi bếp</h1>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
+          Góc nhỏ gỡ rối chuyện nêm nếm, khử mùi, kho xào cho những bàn tay yêu nấu nướng.
+        </p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+</div>
+<!-- Toggle Ask Button -->
+<div class="mt-space-md">
+<button aria-controls="ask-question-box" aria-expanded="false" class="w-full h-12 bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer" id="toggle-ask-form-btn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="toggle-icon">add_circle</span>
+<span id="toggle-label">+ Đặt câu hỏi cho Bếp</span>
+</button>
+</div>
+<!-- Cozy Inline Question Form (Accordion) -->
+<div class="hidden mt-space-md bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all" id="ask-question-box">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">draw</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Gửi nỗi băn khoăn lên Bếp</h2>
+</div>
+<button aria-label="Đóng biểu mẫu" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" id="close-form-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<form class="mt-space-sm space-y-3" id="question-form" onsubmit="event.preventDefault(); handleQuestionSubmit();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="author-name">
+            Tên hiển thị người hỏi
+          </label>
+<input class="w-full h-12 px-3.5 rounded-lg bg-surface text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="author-name" placeholder="vd: Bé Mai, Anh Bếp Vụng..." required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="question-title-input">
+            Điều bạn muốn hỏi
+          </label>
+<input class="w-full h-12 px-3.5 rounded-lg bg-surface text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="question-title-input" placeholder="vd: Làm sao để cá kho không bị tanh?" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="question-details-input">
+            Kể chi tiết khúc mắc của bạn...
+          </label>
+<textarea class="w-full p-3.5 rounded-lg bg-surface text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest resize-none transition-colors shadow-inner" id="question-details-input" placeholder="Mô tả nguyên liệu, nồi niêu bạn dùng, hoặc bước làm đang gặp vấn đề để mọi người tiện mách nước nha..." required="" rows="4"></textarea>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface mb-1.5">Chọn chuyên mục thảo luận</span>
+<div class="flex flex-wrap gap-2" id="topic-chips">
+<button class="topic-chip px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm active:scale-95 transition-all" type="button">Sơ chế</button>
+<button class="topic-chip px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm active:scale-95 transition-all" type="button">Nêm nếm</button>
+<button class="topic-chip px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm active:scale-95 transition-all" type="button">Kho xào</button>
+<button class="topic-chip px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm active:scale-95 transition-all" type="button">Bảo quản</button>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full h-12 bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-sm hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Gửi câu hỏi lên Bếp</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Search & Category Filter Section -->
+<section class="px-gutter-sm space-y-3">
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-4 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-sm focus:outline-none transition-all" id="search-input" placeholder="Tìm câu hỏi, mẹo bếp..." type="search"/>
+</div>
+<!-- Category Filter Chips (Horizontal Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none -mx-gutter-sm px-gutter-sm">
+<button class="filter-chip whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary-container shadow-sm active:scale-95 transition-all cursor-pointer" data-filter="all" type="button">
+        Tất cả
+      </button>
+<button class="filter-chip whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant shadow-sm active:scale-95 transition-all hover:bg-surface-container transition-colors cursor-pointer" data-filter="prep" type="button">
+        Khử tanh &amp; Sơ chế
+      </button>
+<button class="filter-chip whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant shadow-sm active:scale-95 transition-all hover:bg-surface-container transition-colors cursor-pointer" data-filter="season" type="button">
+        Mẹo nêm nếm
+      </button>
+<button class="filter-chip whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant shadow-sm active:scale-95 transition-all hover:bg-surface-container transition-colors cursor-pointer" data-filter="storage" type="button">
+        Bảo quản
+      </button>
+</div>
+</section>
+<!-- Questions Feed -->
+<section class="px-gutter-sm mt-space-md space-y-space-md" id="feed-container">
+<!-- Card 1 -->
+<article class="feed-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col justify-between" data-category="prep">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[10px]">
+              M
+            </div>
+<span class="font-medium text-on-surface">Bé Mai</span>
+<span class="text-outline">•</span>
+<time>2 giờ trước</time>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px]">Kho xào</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+          Làm sao để cá kho không bị tanh mà chắc thịt, thơm lừng?
+        </h2>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Em mới tập kho cá nục và cá lóc cho cả nhà mà kho xong hay bị nát và còn mùi tanh nhẹ ở mang. Các mẹ có bí quyết ướp hay khử mùi...
+        </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 rounded-b-xl">
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">chat_bubble</span>
+<span>12 chia sẻ</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>38 đồng cảm</span>
+</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:opacity-85 transition-opacity" href="#">
+<span>Xem lời khuyên</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="feed-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col justify-between" data-category="prep">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-[10px]">
+              T
+            </div>
+<span class="font-medium text-on-surface">Chị Thảo Lê</span>
+<span class="text-outline">•</span>
+<time>Hôm qua</time>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px]">Sơ chế</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+          Bí quyết luộc rau muống giữ màu xanh mướt, nước canh trong veo vắt chanh không bị đỏ?
+        </h2>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Nhiều lần luộc xong để ra đĩa một lát là rau thâm xỉn, nước luộc sẫm màu. Có phải thêm chút muối hay ngâm nước đá không ạ?
+        </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 rounded-b-xl">
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">chat_bubble</span>
+<span>8 chia sẻ</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>24 đồng cảm</span>
+</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:opacity-85 transition-opacity" href="#">
+<span>Xem lời khuyên</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="feed-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col justify-between" data-category="season">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-[10px]">
+              5
+            </div>
+<span class="font-medium text-on-surface">Chú Năm Bến Tre</span>
+<span class="text-outline">•</span>
+<time>2 ngày trước</time>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px]">Nêm nếm</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+          Nồi canh chua cá lóc: nên xào sơ cá hay thả cá sống vào nước sôi?
+        </h2>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Mỗi người một gu, nhà tui hay phi tỏi xào săn cá rồi mới trút nước me vào. Mấy đứa nhỏ thì thích thả cá trực tiếp lúc nước ùng ục sôi...
+        </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 rounded-b-xl">
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">chat_bubble</span>
+<span>19 chia sẻ</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>52 đồng cảm</span>
+</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:opacity-85 transition-opacity" href="#">
+<span>Xem lời khuyên</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="feed-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col justify-between" data-category="storage">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-[10px]">
+              B
+            </div>
+<span class="font-medium text-on-surface">Mẹ Bắp</span>
+<span class="text-outline">•</span>
+<time>3 ngày trước</time>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px]">Bảo quản</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+          Làm thế nào để bảo quản hành ngò tươi lâu không bị nhũn úng?
+        </h2>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Mua bó hành to về dùng 2 ngày đã úng lá. Em thử bọc giấy báo hay cắm cốc nước có ổn hơn không? Các mẹ chỉ cách với ạ!
+        </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 rounded-b-xl">
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">chat_bubble</span>
+<span>15 chia sẻ</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>41 đồng cảm</span>
+</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:opacity-85 transition-opacity" href="#">
+<span>Xem lời khuyên</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- Load More Button -->
+<div class="px-gutter-sm mt-6">
+<button class="w-full h-12 bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded-xl shadow-sm hover:bg-surface-container transition-colors flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]" id="load-more-btn" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">expand_more</span>
+<span>Xem thêm câu hỏi khác</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggle-ask-form-btn');
+    const askBox = document.getElementById('ask-question-box');
+    const closeBtn = document.getElementById('close-form-btn');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const toggleLabel = document.getElementById('toggle-label');
+
+    function toggleForm(open) {
+      const isHidden = askBox.classList.contains('hidden');
+      const shouldOpen = open !== undefined ? open : isHidden;
+      if (shouldOpen) {
+        askBox.classList.remove('hidden');
+        toggleIcon.textContent = 'remove_circle_outline';
+        toggleLabel.textContent = 'Thu gọn khung câu hỏi';
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.getElementById('author-name').focus();
+      } else {
+        askBox.classList.add('hidden');
+        toggleIcon.textContent = 'add_circle';
+        toggleLabel.textContent = '+ Đặt câu hỏi cho Bếp';
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    toggleBtn.addEventListener('click', () => toggleForm());
+    closeBtn.addEventListener('click', () => toggleForm(false));
+
+    // Form tag chip selector
+    const topicChips = document.querySelectorAll('.topic-chip');
+    topicChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        topicChips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-on-primary-container');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        chip.classList.add('bg-primary-container', 'text-on-primary-container');
+        chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      });
+    });
+
+    // Form submission
+    window.handleQuestionSubmit = function() {
+      const name = document.getElementById('author-name').value.trim();
+      const title = document.getElementById('question-title-input').value.trim();
+      const details = document.getElementById('question-details-input').value.trim();
+
+      if (!title || !name) return;
+
+      const feed = document.getElementById('feed-container');
+      const newCard = document.createElement('article');
+      newCard.className = 'feed-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col justify-between animate-fadeIn';
+      newCard.innerHTML = `
+        <div>
+          <div class="flex items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[10px]">
+                ${name.charAt(0).toUpperCase()}
+              </div>
+              <span class="font-medium text-on-surface">${name}</span>
+              <span class="text-outline">•</span>
+              <time>Vừa xong</time>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px]">Bếp mới hỏi</span>
+          </div>
+
+          <h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+            ${title}
+          </h2>
+
+          <p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            ${details}
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 rounded-b-xl">
+          <div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px] text-primary">chat_bubble</span>
+              <span>0 chia sẻ</span>
+            </span>
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              <span>1 đồng cảm</span>
+            </span>
+          </div>
+          <a href="#" class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:opacity-85 transition-opacity">
+            <span>Xem lời khuyên</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      `;
+
+      feed.insertBefore(newCard, feed.firstChild);
+      document.getElementById('question-form').reset();
+      toggleForm(false);
+      newCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+
+    // Category Filtering
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.feed-card');
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-on-primary-container');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        chip.classList.add('bg-primary-container', 'text-on-primary-container');
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+
+        const filter = chip.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Simple Search Filter
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('.feed-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(q)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+
+    // Load More toast/interaction
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    loadMoreBtn.addEventListener('click', () => {
+      loadMoreBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin text-primary">progress_activity</span>
+        <span>Đang lục thêm chuyện bếp...</span>
+      `;
+      setTimeout(() => {
+        loadMoreBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px] text-secondary">check</span>
+          <span>Đã hiển thị tất cả chuyện bếp gần đây</span>
+        `;
+        loadMoreBtn.disabled = true;
+      }, 700);
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(78,64,53,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trang-chu" href="#"><span class="material-symbols-outlined text-[24px]">cottage</span><span class="font-label-sm text-label-sm mt-0.5">Trang chủ</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="tim-mon" href="#"><span class="material-symbols-outlined text-[24px]">local_dining</span><span class="font-label-sm text-label-sm mt-0.5">Tìm món</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="yeu-thich" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm mt-0.5">Yêu thích</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="goc-bep" href="#"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm mt-0.5">Góc bếp</span></a></div></nav></body></html>

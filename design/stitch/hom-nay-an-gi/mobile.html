@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#fff8f5", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#b0f2bf", "primary-container": "#c2542d", "inverse-on-surface": "#f9efe9", "primary-fixed-dim": "#ffb59d", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#614000", "on-error-container": "#93000a", "on-primary-fixed": "#390c00", "on-primary-fixed-variant": "#832701", "surface-tint": "#a33e18", "tertiary-fixed-dim": "#ffba45", "tertiary": "#7f5500", "surface-container": "#f7ece7", "on-secondary-container": "#337048", "primary-fixed": "#ffdbd0", "tertiary-fixed": "#ffddb0", "outline-variant": "#dec0b7", "on-secondary-fixed": "#00210e", "on-tertiary-fixed": "#281800", "on-primary-container": "#fffeff", "surface-container-high": "#f1e6e1", "secondary": "#2d6a43", "error": "#ba1a1a", "on-surface": "#1f1b18", "surface-variant": "#ebe0db", "surface-container-low": "#fcf1ec", "secondary-fixed": "#b0f2bf", "on-secondary": "#ffffff", "on-background": "#1f1b18", "background": "#fff8f5", "surface-container-highest": "#ebe0db", "secondary-fixed-dim": "#95d5a5", "outline": "#8a726a", "surface-bright": "#fff8f5", "on-secondary-fixed-variant": "#10512d", "surface-dim": "#e2d8d3", "inverse-surface": "#352f2c", "on-surface-variant": "#57423b", "on-primary": "#ffffff", "on-tertiary-container": "#ffffff", "inverse-primary": "#ffb59d", "on-error": "#ffffff", "primary": "#a13c17", "tertiary-container": "#9f6c00" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-md": "2rem", "margin-lg": "3.5rem", "gutter-lg": "2rem", "gutter-sm": "1rem", "margin": "1rem", "space-md": "1rem", "space-sm": "0.5rem" }, fontFamily: { "label-lg": ["Be Vietnam Pro"], "body-cooking-step": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "display-mobile": ["Be Vietnam Pro"], "headline-sm": ["Be Vietnam Pro"], "body-md": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "headline-lg-mobile": ["Be Vietnam Pro"], "display": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "headline-lg": ["Be Vietnam Pro"] }, fontSize: { "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "body-cooking-step": ["20px", { lineHeight: "32px", letterSpacing: "0.01em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" }], "display-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "600" }], "display": ["44px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "42px", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f5;color:#1f1b18;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(78,64,53,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">skillet</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Bếp Nhà Mình</span></div><div class="flex items-center gap-space-xs"><a aria-label="Tìm kiếm" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[24px]">search</span></a><a aria-label="Tài khoản" class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary ml-1" href="#"><span class="material-symbols-outlined text-[20px]">person</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-grow"><div class="flex flex-col w-full px-margin pb-space-lg">
+<div class="flex flex-col items-center text-center mt-space-md mb-space-lg">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container shadow-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">eco</span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Cứu nguy bữa cơm hôm nay</span>
+</div>
+<h1 class="font-display-mobile text-display-mobile text-on-surface tracking-tight mt-1 mb-2">
+      Hôm nay ăn gì?
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto leading-relaxed">
+      Nếu bạn đang phân vân chưa biết tối nay nấu món gì cho cả nhà, để Bếp Nhà Mình bốc giúp bạn một món ngon đưa cơm nhé!
+    </p>
+</div>
+<section class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm mb-space-lg">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-[#9E3F1D]">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-semibold">Bộ lọc tùy chọn</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bạn đang muốn tìm món như thế nào? (Không bắt buộc)</p>
+</div>
+</div>
+<div class="space-y-space-md pt-1">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
+          Thể loại món
+        </label>
+<div class="flex flex-wrap gap-2" id="category-filter-group">
+<button class="category-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-[#C2542D] text-white shadow-sm" data-category="all" type="button">
+            Tất cả
+          </button>
+<button class="category-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-category="braised" type="button">
+            Món mặn / kho
+          </button>
+<button class="category-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-category="soup" type="button">
+            Món canh thanh mát
+          </button>
+<button class="category-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-category="stirfry" type="button">
+            Món xào nhanh
+          </button>
+<button class="category-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-category="vegetarian" type="button">
+            Món chay thanh tịnh
+          </button>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
+          Thời gian nấu nướng
+        </label>
+<div class="flex flex-wrap gap-2" id="time-filter-group">
+<button class="time-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-[#C2542D] text-white shadow-sm" data-time="all" type="button">
+            Tất cả thời gian
+          </button>
+<button class="time-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-time="15" type="button">
+            ≤ 15 phút (Cực nhanh)
+          </button>
+<button class="time-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-time="30" type="button">
+            ≤ 30 phút (Vừa vặn)
+          </button>
+<button class="time-btn min-h-[44px] px-3.5 py-2 rounded-xl font-label-md text-label-md transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] bg-surface-container text-on-surface hover:bg-surface-container-high" data-time="45" type="button">
+            ≤ 45 phút
+          </button>
+</div>
+</div>
+</div>
+</section>
+<div class="w-full mb-space-lg">
+<button class="w-full min-h-[52px] px-6 py-3.5 rounded-xl bg-[#C2542D] text-white font-headline-sm text-headline-sm flex items-center justify-center gap-3 shadow-md hover:opacity-95 active:scale-[0.98] transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" id="suggest-dish-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">soup_kitchen</span>
+<span>Gợi ý món cho tôi</span>
+</button>
+</div>
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md transition-all duration-300 mb-space-lg" id="result-card">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Traditional Vietnamese home cooked dish of golden fried tofu blocks braised in glossy red fresh tomato sauce with finely chopped fresh scallions and ground black pepper served in a warm unglazed terracotta bowl on a woven bamboo mat, soft natural daylight, mouthwatering food photography, cozy earthy tones." id="dish-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBrq99CBRKm0RqAu900brcr3tVE7vmrRdR6cxoP75SqwOIjLjzEVB82Mq0lVpH_8VMhEQOjAYwzwTpnGtIJuW3-VnyO4tqZKf9sA7hAyCoS596OTqMKNiRr2B8u74qutx8AlSd7JdOFug8OOrGOAuui2M6wm337YEmUqCd_ayhx4xz1w9S2_wAhtNk7pZIDmPlZajXN5T_X21ALECbMsr5bgGb-vcNjLeiZYFaZ8mj"/>
+<div class="absolute top-3 right-3 flex items-center gap-2">
+<button aria-label="Lưu vào danh sách yêu thích" class="w-11 h-11 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-[#9E3F1D] shadow-sm hover:bg-surface-container-lowest active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" type="button">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-3 left-3 flex flex-wrap gap-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/95 backdrop-blur-sm text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span id="dish-time">25 phút</span>
+</div>
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span id="dish-difficulty">Dễ nấu</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col">
+<div class="flex items-center gap-2 mb-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm text-[#9E3F1D] font-medium" id="dish-tag-1">#MónChayThanhĐạm</span>
+<span class="font-label-sm text-label-sm text-[#9E3F1D] font-medium" id="dish-tag-2">#ĐưaCơmGiaĐình</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-2" id="dish-title">
+        Đậu hũ sốt cà chua
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg" id="dish-desc">
+        Từng miếng đậu hũ vàng giòn ngập trong nước sốt cà chua đỏ au, chua ngọt đậm đà, rắc thêm chút hành hoa thơm nức mũi. Món ăn thanh lành mà cực kỳ hao cơm!
+      </p>
+<div class="flex flex-col gap-3">
+<a class="w-full min-h-[48px] py-3 px-6 rounded-xl bg-[#C2542D] text-white font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.98] transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" href="#">
+<span>Xem công thức chi tiết</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="w-full min-h-[48px] py-3 px-6 rounded-xl bg-surface-container text-[#9E3F1D] font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-[0.98] transition-all focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" id="reroll-btn" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300" id="reroll-icon">autorenew</span>
+<span>Đổi món khác</span>
+</button>
+</div>
+</div>
+</article>
+<aside class="bg-surface-container-low rounded-2xl p-space-md flex items-start gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex-shrink-0 flex items-center justify-center text-[#9E3F1D]">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-0.5">Gợi ý mâm cơm tròn vị</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+        Bạn có thể chọn thêm một món canh chua thanh mát hoặc một đĩa rau muống luộc để bữa cơm gia đình hôm nay thêm tròn vị nhé!
+      </p>
+</div>
+</aside>
+</div>
+<script>
+  (function () {
+    const dishes = [
+      {
+        title: "Đậu hũ sốt cà chua",
+        time: "25 phút",
+        difficulty: "Dễ nấu",
+        tag1: "#MónChayThanhĐạm",
+        tag2: "#ĐưaCơmGiaĐình",
+        desc: "Từng miếng đậu hũ vàng giòn ngập trong nước sốt cà chua đỏ au, chua ngọt đậm đà, rắc thêm chút hành hoa thơm nức mũi. Món ăn thanh lành mà cực kỳ hao cơm!"
+      },
+      {
+        title: "Thịt ba chỉ kho tiêu",
+        time: "35 phút",
+        difficulty: "Vừa vặn",
+        tag1: "#MónMặnĐậmĐà",
+        tag2: "#CơmNóngMỗiNgày",
+        desc: "Thịt ba chỉ cháy cạnh thơm lừng, thấm đẫm nước màu cánh gián ngọt thanh cùng hạt tiêu sọ cay nồng nàn. Món ăn kinh điển vét sạch nồi cơm niêu!"
+      },
+      {
+        title: "Canh ngao nấu chua thì là",
+        time: "20 phút",
+        difficulty: "Dễ nấu",
+        tag1: "#CanhThanhMát",
+        tag2: "#GiảiNhiệtNgàyHè",
+        desc: "Nước canh trong veo ngọt đậm vị nghêu tươi, hòa quyện vị chua thanh của me chín hoặc dứa cùng mùi thơm đặc trưng của nhánh thì là và hành hoa."
+      },
+      {
+        title: "Bò xào bông thiên lý",
+        time: "15 phút",
+        difficulty: "Cực nhanh",
+        tag1: "#MónXàoThơmNức",
+        tag2: "#BổDưỡngThơmNgon",
+        desc: "Thịt bò thăn mềm mọng xào lửa lớn vừa chín tới cùng bông thiên lý xanh mướt, ngọt giòn tự nhiên và dậy mùi tỏi phi thơm phức cả gian bếp."
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function bindPillGroup(selector) {
+      const buttons = document.querySelectorAll(selector);
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.classList.remove('bg-[#C2542D]', 'text-white');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          });
+          btn.classList.remove('bg-surface-container', 'text-on-surface');
+          btn.classList.add('bg-[#C2542D]', 'text-white');
+        });
+      });
+    }
+
+    bindPillGroup('.category-btn');
+    bindPillGroup('.time-btn');
+
+    function switchDish() {
+      const card = document.getElementById('result-card');
+      const icon = document.getElementById('reroll-icon');
+
+      if (icon) {
+        icon.classList.add('rotate-180');
+        setTimeout(() => icon.classList.remove('rotate-180'), 350);
+      }
+
+      currentIndex = (currentIndex + 1) % dishes.length;
+      const data = dishes[currentIndex];
+
+      if (card) {
+        card.style.opacity = '0.4';
+        card.style.transform = 'translateY(4px)';
+
+        setTimeout(() => {
+          document.getElementById('dish-title').textContent = data.title;
+          document.getElementById('dish-time').textContent = data.time;
+          document.getElementById('dish-difficulty').textContent = data.difficulty;
+          document.getElementById('dish-tag-1').textContent = data.tag1;
+          document.getElementById('dish-tag-2').textContent = data.tag2;
+          document.getElementById('dish-desc').textContent = data.desc;
+
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 150);
+      }
+    }
+
+    const suggestBtn = document.getElementById('suggest-dish-btn');
+    const rerollBtn = document.getElementById('reroll-btn');
+
+    if (suggestBtn) suggestBtn.addEventListener('click', switchDish);
+    if (rerollBtn) rerollBtn.addEventListener('click', switchDish);
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(78,64,53,0.06)]" data-active-classes="text-primary"><div class="h-16 px-gutter flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="trang-chu" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm mt-0.5">Trang chủ</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="hom-nay-an-gi" href="#"><span class="material-symbols-outlined text-[22px]">local_dining</span><span class="font-label-sm text-label-sm mt-0.5">Tìm món</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="yeu-thich" href="#"><span class="material-symbols-outlined text-[22px]">bookmark_heart</span><span class="font-label-sm text-label-sm mt-0.5">Yêu thích</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="goc-bep" href="#"><span class="material-symbols-outlined text-[22px]">countertops</span><span class="font-label-sm text-label-sm mt-0.5">Góc bếp</span></a></div></nav></body></html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title">
+  <title id="title">Ảnh minh họa canh chua cá</title>
+  <rect width="800" height="600" fill="#F5EFEB"/>
+  <circle cx="400" cy="278" r="202" fill="#FFFFFF" stroke="#E6DED6" stroke-width="18"/>
+  <circle cx="400" cy="278" r="160" fill="#E6A762"/>
+  <path d="M265 265c70-76 180-73 264 7-80 77-192 79-264-7Z" fill="#F8D6A5"/>
+  <circle cx="337" cy="225" r="27" fill="#C2542D"/>
+  <circle cx="482" cy="331" r="34" fill="#C2542D"/>
+  <path d="M312 346c51-43 88-40 125 4M455 209c26-21 53-17 83 10" fill="none" stroke="#3E7B52" stroke-width="18" stroke-linecap="round"/>
+  <text x="400" y="531" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#26211E">Canh chua cá</text>
+  <text x="400" y="565" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#635952">Ảnh minh họa — sẽ thay bằng ảnh có bản quyền phù hợp</text>
+</svg>

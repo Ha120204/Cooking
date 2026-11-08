@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-be-vietnam), "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-bep-primary: #c2542d;
+  --color-bep-primary-dark: #9e3f1d;
+  --color-bep-primary-light: #f8ece8;
+  --color-bep-herb: #3e7b52;
+  --color-bep-herb-light: #ebf3ee;
+  --color-bep-canvas: #fbf9f5;
+  --color-bep-surface: #ffffff;
+  --color-bep-dim: #f5efeb;
+  --color-bep-ink: #26211e;
+  --color-bep-smoke: #635952;
+  --color-bep-ash: #8c8178;
+  --color-bep-border: #e6ded6;
+  --color-bep-border-hover: #d4c7ba;
+  --color-bep-star: #e5a124;
+  --color-bep-success: #3e7b52;
+  --color-bep-error-border: #d93829;
+  --color-bep-error-text: #b42318;
+  --radius-bep-sm: 6px;
+  --radius-bep-md: 12px;
+  --radius-bep-lg: 16px;
+  --shadow-bep-card: 0 2px 8px rgba(38, 33, 30, 0.05);
+  --shadow-bep-hover: 0 8px 24px rgba(194, 84, 45, 0.12);
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-bep-canvas); color: var(--color-bep-ink); }
+button, input, textarea { font: inherit; }
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-bep-primary-dark);
+  outline-offset: 2px;
+}
+
+.recipe-prose h2 {
+  margin: 2rem 0 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--color-bep-ink);
+}
+.recipe-prose h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--color-bep-ink);
+}
+.recipe-prose p, .recipe-prose li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-bep-smoke);
+}
+.recipe-prose p { margin: 0.5rem 0 1rem; }
+.recipe-prose ul, .recipe-prose ol { margin: 0.5rem 0 1.5rem; padding-left: 1.5rem; }
+.recipe-prose ul { list-style: disc; }
+.recipe-prose ol { list-style: decimal; }
+.recipe-prose strong { color: var(--color-bep-ink); }

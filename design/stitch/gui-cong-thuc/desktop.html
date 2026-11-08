@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Bếp Nhà Mình - Hương Vị Cơm Nhà</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#fff8f5", "primary": "#a13c17", "surface-container-low": "#fcf1ec", "on-tertiary-container": "#ffffff", "on-tertiary-fixed-variant": "#614000", "on-error-container": "#93000a", "surface-container-highest": "#ebe0db", "inverse-on-surface": "#f9efe9", "on-secondary": "#ffffff", "surface-container-high": "#f1e6e1", "on-primary-fixed-variant": "#832701", "on-primary": "#ffffff", "on-secondary-fixed": "#00210e", "error": "#ba1a1a", "outline": "#8a726a", "primary-fixed": "#ffdbd0", "primary-container": "#c2542d", "surface-variant": "#ebe0db", "on-background": "#1f1b18", "on-primary-fixed": "#390c00", "primary-fixed-dim": "#ffb59d", "surface-bright": "#fff8f5", "secondary": "#2d6a43", "surface-container-lowest": "#ffffff", "tertiary": "#7f5500", "tertiary-container": "#9f6c00", "on-error": "#ffffff", "background": "#fff8f5", "on-tertiary-fixed": "#281800", "secondary-container": "#b0f2bf", "inverse-primary": "#ffb59d", "tertiary-fixed": "#ffddb0", "on-primary-container": "#fffeff", "outline-variant": "dec0b7", "inverse-surface": "#352f2c", "surface-container": "#f7ece7", "on-secondary-fixed-variant": "#10512d", "on-surface": "#1f1b18", "on-secondary-container": "#337048", "tertiary-fixed-dim": "#ffba45", "surface-tint": "#a33e18", "on-surface-variant": "#57423b", "secondary-fixed": "#b0f2bf", "secondary-fixed-dim": "#95d5a5", "error-container": "#ffdad6", "surface-dim": "#e2d8d3", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-lg": "3.5rem", "margin-md": "2rem", "gutter-lg": "2rem", "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-sm": "1rem" }, "fontFamily": { "body-cooking-step": [ "Be Vietnam Pro" ], "body-lg": [ "Be Vietnam Pro" ], "body-sm": [ "Be Vietnam Pro" ], "body-md": [ "Be Vietnam Pro" ], "label-md": [ "Be Vietnam Pro" ], "display-mobile": [ "Be Vietnam Pro" ], "display": [ "Be Vietnam Pro" ], "label-lg": [ "Be Vietnam Pro" ], "headline-lg-mobile": [ "Be Vietnam Pro" ], "headline-sm": [ "Be Vietnam Pro" ], "label-sm": [ "Be Vietnam Pro" ], "headline-lg": [ "Be Vietnam Pro" ], "headline-md": [ "Be Vietnam Pro" ] }, "fontSize": { "body-cooking-step": [ "20px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-sm": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-md": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display": [ "44px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-lg": [ "15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(78,64,53,0.06)]"><div class="h-20 max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex flex-col group" data-path="cong-thuc" href="#"><span class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Bếp Nhà Mình</span><span class="font-label-sm text-label-sm text-on-surface-variant">Hương vị cơm nhà</span></a><nav class="hidden xl:flex items-center gap-gutter" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="cong-thuc" href="#">Công thức</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="thuc-don-tuan" href="#">Thực đơn tuần</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="thu-thach-tuan" href="#">Thử thách tuần</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="hoi-bep" href="#">Hỏi bếp</a></nav></div><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px]" data-path="hom-nay-an-gi" href="#">Hôm nay ăn gì?</a><a class="inline-flex items-center justify-center px-space-md lg:px-gutter-sm py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-lg text-label-lg transition-all min-h-[44px] shadow-[0_2px_8px_rgba(194,84,45,0.2)]" data-path="gop-cong-thuc" href="#">+ Góp công thức</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="max-w-[1240px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<!-- 1. Breadcrumb & Tiêu đề -->
+<section class="flex flex-col gap-space-sm mb-space-lg">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-label-md font-label-md">
+<a class="text-[#9E3F1D] hover:underline flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 rounded px-1 py-0.5 min-h-[44px] items-center inline-flex" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+          Trang chủ
+        </a>
+<span class="text-outline select-none">/</span>
+<span class="text-on-surface font-semibold px-1 py-0.5">Góp công thức</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#9E3F1D] font-bold">Gian bếp cộng đồng</span>
+<h1 class="font-display text-display text-on-surface tracking-tight mt-1">
+            Góp công thức — Cùng thắp lửa bếp nhà
+          </h1>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-label-md font-label-md text-on-surface-variant bg-surface-container-high px-space-md py-space-xs rounded-full">
+<span class="material-symbols-outlined text-[#9E3F1D] text-[20px]">local_fire_department</span>
+          Hơn 2,400+ món ngon đã được sẻ chia
+        </div>
+</div>
+<!-- Callout Banner Ấm cúng -->
+<div class="mt-space-md p-space-md lg:p-space-lg rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-[#9E3F1D]">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">soup_kitchen</span>
+</div>
+<div class="flex flex-col justify-center text-left">
+<h2 class="font-headline-sm text-headline-sm text-[#9E3F1D] font-bold">Lời ngỏ từ Ban Biên Tập</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+            Mọi công thức gửi về Bếp Nhà Mình đều được ban biên tập xem kỹ và kiểm duyệt trước khi đăng tải để giữ trọn vẹn vị mộc mạc và chỉ dẫn chính xác nhất cho người vào bếp. Cảm ơn bạn đã sẻ chia yêu thương!
+          </p>
+</div>
+</div>
+</section>
+<!-- 2. Bố cục 2 cột (Cột Trái 8/12, Cột Phải 4/12) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Cột Trái: Biểu mẫu nhập liệu (8 cột) -->
+<form class="lg:col-span-8 flex flex-col gap-space-xl" id="recipeForm" onsubmit="event.preventDefault(); submitRecipe();">
+<!-- THẺ 1: Thông tin món ăn -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="w-2.5 h-6 bg-[#C2542D] rounded-full inline-block"></span>
+<h3 class="font-headline-md text-headline-md text-on-surface">1. Thông tin món ăn</h3>
+</div>
+<!-- Tên người nấu -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-[#9E3F1D]" for="authorName">
+                Tên hiển thị người nấu <span class="text-[#B42318]">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline" id="authorCount">15/50 ký tự</span>
+</div>
+<input class="w-full min-h-[48px] px-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner" id="authorName" maxlength="50" name="authorName" oninput="document.getElementById('authorCount').innerText = this.value.length + '/50 ký tự'" placeholder="VD: Cô Ba Sài Gòn, Bác Bảy Miền Tây..." required="" type="text" value="Cô Ba Sài Gòn"/>
+</div>
+<!-- Tên công thức -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-[#9E3F1D]" for="recipeTitle">
+                Tên công thức <span class="text-[#B42318]">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline" id="titleCount">12/80 ký tự</span>
+</div>
+<input class="w-full min-h-[48px] px-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner font-semibold" id="recipeTitle" maxlength="80" name="recipeTitle" oninput="document.getElementById('titleCount').innerText = this.value.length + '/80 ký tự'" placeholder="VD: Canh chua cá, Bún riêu chay..." required="" type="text" value="Bún riêu chay"/>
+</div>
+<!-- Mô tả ngắn -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-[#9E3F1D]" for="recipeDesc">
+                Mô tả ngắn cảm hứng món ăn <span class="text-[#B42318]">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline" id="descCount">108/300 ký tự</span>
+</div>
+<textarea class="w-full p-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner resize-y leading-relaxed" id="recipeDesc" maxlength="300" name="recipeDesc" oninput="document.getElementById('descCount').innerText = this.value.length + '/300 ký tự'" required="" rows="3">Vị chua thanh mát lành từ cà chua chín mọng và me tươi, kết hợp riêu đậu hũ thơm bùi béo ngậy cho ngày thanh đạm.</textarea>
+<p class="font-label-sm text-label-sm text-outline">Hãy miêu tả hương vị, nguồn gốc kỷ niệm hoặc dịp thưởng thức thích hợp.</p>
+</div>
+</section>
+<!-- THẺ 2: Danh sách nguyên liệu -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-6 bg-[#C2542D] rounded-full inline-block"></span>
+<h3 class="font-headline-md text-headline-md text-on-surface">2. Danh sách nguyên liệu</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-3 py-1 rounded-full w-fit">
+              Ưu tiên định lượng rõ ràng
+            </span>
+</div>
+<!-- Tiêu đề cột desktop -->
+<div class="hidden md:grid grid-cols-12 gap-space-md font-label-md text-label-md text-[#9E3F1D] px-space-xs">
+<div class="col-span-6">Tên nguyên liệu <span class="text-[#B42318]">*</span></div>
+<div class="col-span-3">Số lượng <span class="text-[#B42318]">*</span></div>
+<div class="col-span-2">Đơn vị</div>
+<div class="col-span-1 text-center">Xóa</div>
+</div>
+<!-- Danh sách hàng lặp lại -->
+<div class="flex flex-col gap-space-sm" id="ingredientsList">
+<!-- Hàng 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xs md:gap-space-md items-center bg-surface-container-low/60 p-2.5 md:p-2 rounded-lg ingredient-row">
+<div class="md:col-span-6">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Tên nguyên liệu" required="" type="text" value="Đậu hũ mơ"/>
+</div>
+<div class="md:col-span-3">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Số lượng" required="" type="text" value="2"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Đơn vị" type="text" value="miếng"/>
+</div>
+<div class="md:col-span-1 flex justify-end md:justify-center">
+<button aria-label="Xóa nguyên liệu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeIngredientRow(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Hàng 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xs md:gap-space-md items-center bg-surface-container-low/60 p-2.5 md:p-2 rounded-lg ingredient-row">
+<div class="md:col-span-6">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Tên nguyên liệu" required="" type="text" value="Cà chua chín mọng"/>
+</div>
+<div class="md:col-span-3">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Số lượng" required="" type="text" value="3"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Đơn vị" type="text" value="quả"/>
+</div>
+<div class="md:col-span-1 flex justify-end md:justify-center">
+<button aria-label="Xóa nguyên liệu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeIngredientRow(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Hàng 3 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xs md:gap-space-md items-center bg-surface-container-low/60 p-2.5 md:p-2 rounded-lg ingredient-row">
+<div class="md:col-span-6">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Tên nguyên liệu" required="" type="text" value="Nấm rơm tươi"/>
+</div>
+<div class="md:col-span-3">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Số lượng" required="" type="text" value="150"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Đơn vị" type="text" value="gram"/>
+</div>
+<div class="md:col-span-1 flex justify-end md:justify-center">
+<button aria-label="Xóa nguyên liệu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeIngredientRow(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Hàng 4 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xs md:gap-space-md items-center bg-surface-container-low/60 p-2.5 md:p-2 rounded-lg ingredient-row">
+<div class="md:col-span-6">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Tên nguyên liệu" required="" type="text" value="Sữa đậu nành nguyên chất"/>
+</div>
+<div class="md:col-span-3">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Số lượng" required="" type="text" value="500"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Đơn vị" type="text" value="ml"/>
+</div>
+<div class="md:col-span-1 flex justify-end md:justify-center">
+<button aria-label="Xóa nguyên liệu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeIngredientRow(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Hàng 5 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xs md:gap-space-md items-center bg-surface-container-low/60 p-2.5 md:p-2 rounded-lg ingredient-row">
+<div class="md:col-span-6">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Tên nguyên liệu" required="" type="text" value="Me vắt lọc lấy nước cốt"/>
+</div>
+<div class="md:col-span-3">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Số lượng" required="" type="text" value="2"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" placeholder="Đơn vị" type="text" value="muỗng canh"/>
+</div>
+<div class="md:col-span-1 flex justify-end md:justify-center">
+<button aria-label="Xóa nguyên liệu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeIngredientRow(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Nút thêm nguyên liệu -->
+<div>
+<button class="min-h-[44px] px-space-md py-space-sm rounded-lg bg-surface-container-high text-[#9E3F1D] hover:bg-surface-container-highest font-label-md text-label-md transition-all flex items-center gap-space-xs focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2" onclick="addIngredientRow()" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+              + Thêm nguyên liệu
+            </button>
+</div>
+</section>
+<!-- THẺ 3: Các bước thực hiện -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="w-2.5 h-6 bg-[#C2542D] rounded-full inline-block"></span>
+<h3 class="font-headline-md text-headline-md text-on-surface">3. Các bước thực hiện</h3>
+</div>
+<div class="flex flex-col gap-space-md" id="cookingStepsContainer">
+<!-- Bước 1 -->
+<div class="bg-surface-container-low/50 p-space-md rounded-xl flex flex-col gap-space-sm step-block">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-[#C2542D] text-white flex items-center justify-center font-bold text-label-sm">1</span>
+<span class="font-headline-sm text-headline-sm text-[#9E3F1D]">Bước 1: Sơ chế nguyên liệu</span>
+</div>
+<button aria-label="Xóa bước này" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeStepBlock(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<textarea class="w-full p-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner leading-relaxed" maxlength="500" oninput="updateStepCount(this, 500)" rows="3">Đậu hũ cắt miếng vuông vừa ăn, chiên vàng giòn 4 mặt. Cà chua rửa sạch bổ múi cau. Nấm rơm ngâm nước muối loãng 10 phút rồi chẻ đôi để ráo.</textarea>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Mẹo: ghi rõ nhiệt độ lửa, thời gian hoặc mắt thấy tai nghe</span>
+<span class="text-outline char-counter">142/500 ký tự</span>
+</div>
+</div>
+</div>
+<!-- Bước 2 -->
+<div class="bg-surface-container-low/50 p-space-md rounded-xl flex flex-col gap-space-sm step-block">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-[#C2542D] text-white flex items-center justify-center font-bold text-label-sm">2</span>
+<span class="font-headline-sm text-headline-sm text-[#9E3F1D]">Bước 2: Nấu riêu đậu nành</span>
+</div>
+<button aria-label="Xóa bước này" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeStepBlock(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<textarea class="w-full p-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner leading-relaxed" maxlength="500" oninput="updateStepCount(this, 500)" rows="3">Đun sữa đậu nành trên lửa nhỏ cho sôi lăn tăn, cho từ từ nước cốt me và chút muối để kết tủa thành từng mảng riêu bùi béo, vớt nhẹ ra chén riêng.</textarea>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Mẹo: khuấy nhẹ tay một chiều để riêu không bị nát</span>
+<span class="text-outline char-counter">156/500 ký tự</span>
+</div>
+</div>
+</div>
+<!-- Bước 3 -->
+<div class="bg-surface-container-low/50 p-space-md rounded-xl flex flex-col gap-space-sm step-block">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-[#C2542D] text-white flex items-center justify-center font-bold text-label-sm">3</span>
+<span class="font-headline-sm text-headline-sm text-[#9E3F1D]">Bước 3: Nấu nước dùng &amp; hoàn thiện</span>
+</div>
+<button aria-label="Xóa bước này" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]" onclick="removeStepBlock(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<textarea class="w-full p-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner leading-relaxed" maxlength="500" oninput="updateStepCount(this, 500)" rows="3">Phi thơm boa-rô, xào sơ cà chua và nấm rơm. Đổ nước dùng rau củ vào đun sôi, nêm hạt nêm chay và đường phèn vừa vị. Khi ăn xếp bún, riêu đậu, đậu hũ rán, chan nước dùng nóng hổi.</textarea>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Ăn kèm rau sống, bắp chuối bào và chanh ớt</span>
+<span class="text-outline char-counter">178/500 ký tự</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Nút thêm bước -->
+<div>
+<button class="min-h-[44px] px-space-md py-space-sm rounded-lg bg-surface-container-high text-[#9E3F1D] hover:bg-surface-container-highest font-label-md text-label-md transition-all flex items-center gap-space-xs focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2" onclick="addStepBlock()" type="button">
+<span class="material-symbols-outlined text-[20px]">playlist_add</span>
+              + Thêm bước nấu
+            </button>
+</div>
+</section>
+<!-- THẺ 4: Hình ảnh minh họa (Không upload file) -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="w-2.5 h-6 bg-[#C2542D] rounded-full inline-block"></span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">4. Hình ảnh minh họa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hỗ trợ dán đường dẫn công khai (không cần tải tệp từ máy)</p>
+</div>
+</div>
+<!-- Đường dẫn ảnh nguồn -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-[#9E3F1D] flex items-center gap-1.5" for="imageUrl">
+<span class="material-symbols-outlined text-[18px]">link</span>
+              Đường dẫn ảnh nguồn (URL)
+            </label>
+<input class="w-full min-h-[48px] px-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner" id="imageUrl" name="imageUrl" placeholder="https://images.unsplash.com/photo-bun-rieu-chay..." type="url" value="https://images.unsplash.com/photo-1546069901-ba9599a7e63c"/>
+<span class="font-label-sm text-label-sm text-outline">
+              Dán đường dẫn ảnh món ăn công khai nếu có (không cần tải tệp từ máy)
+            </span>
+</div>
+<!-- Nguồn ảnh / Người thực hiện -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-[#9E3F1D] flex items-center gap-1.5" for="imageCredit">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+              Nguồn ảnh / Người thực hiện (Credit)
+            </label>
+<input class="w-full min-h-[48px] px-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner" id="imageCredit" name="imageCredit" placeholder="VD: Ảnh tự chụp bởi Cô Ba, hoặc Nguồn: Bếp Chay..." type="text" value="Ảnh tự chụp bởi Bếp Chay An Lạc"/>
+<span class="font-label-sm text-label-sm text-outline">
+              Ghi nhận bản quyền hình ảnh
+            </span>
+</div>
+<!-- Preview nhỏ mộc mạc -->
+<div class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-low border-0">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A steaming rustic bowl of Vietnamese vegetarian bún riêu noodle soup, filled with golden fried tofu cubes, rich tomato wedges, fluffy soybean curds, herbs, in an authentic unglazed clay bowl with warm natural counter light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA80VurBp9cu_9t8zx3doR1tycT5hJUyuWjgeL_G6DQ3geKeMVRyJdeupmd05EYZSLl6lHC2WJ0w78L4LJn0_T8U4mKavAlzpo8en1beaAL-g2eNYJd7u3DqkY0zP4e7CWBBBzT8VdzNlC_csE-fr2t2flGLm2DKSczvR2CZZ2P0aqKrJzU6RjkYOVBJSj3dijVbOuS0PmSTKTVtDzXsFNGoTHXdboOm6BXVfbF4LCY"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Khung xem trước ảnh món</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ảnh sẽ hiển thị ở tỷ lệ ấm cúng 4:3 trên thẻ bài viết sau khi được duyệt.</p>
+</div>
+</div>
+</section>
+<!-- THẺ 5: Khối Xác nhận & Gửi công thức -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Checkbox xác nhận quyền -->
+<label class="flex items-start gap-space-md cursor-pointer select-none min-h-[44px] items-center p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-6 h-6 rounded text-[#C2542D] focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 accent-[#C2542D] cursor-pointer shrink-0 mt-0.5" id="copyrightAgree" required="" type="checkbox"/>
+<div class="font-body-md text-body-md text-on-surface">
+              Tôi có quyền chia sẻ nội dung và hình ảnh này <span class="text-[#B42318] font-bold">*</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nội dung không sao chép trái phép và phù hợp với thuần phong mỹ tục ẩm thực Việt.</p>
+</div>
+</label>
+<!-- Dòng cảnh báo lỗi mặc định ẩn/hiện nếu thiếu -->
+<div class="hidden p-space-sm px-space-md rounded-lg bg-surface-container-highest text-[#B42318] font-label-md text-label-md flex items-center gap-2" id="formAlert">
+<span class="material-symbols-outlined text-[18px]">error</span>
+<span>Vui lòng nhập đầy đủ thông tin và xác nhận bản quyền nội dung.</span>
+</div>
+<!-- Nút CTA chính -->
+<div class="pt-space-xs flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md">
+<button class="min-h-[48px] px-space-xl py-3 rounded-lg bg-[#C2542D] text-white hover:bg-[#9E3F1D] font-label-lg text-label-lg transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 cursor-pointer font-bold" type="submit">
+<span class="material-symbols-outlined text-[22px]">outdoor_grill</span>
+              Gửi công thức lên bếp
+            </button>
+<span class="font-label-sm text-label-sm text-outline text-center sm:text-left">
+              Miễn phí &amp; phi thương mại hoàn toàn
+            </span>
+</div>
+<div class="pt-space-xs flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-[#9E3F1D] shrink-0">hourglass_top</span>
+<span>Sau khi gửi, công thức sẽ được ban biên tập rà soát trong 24–48 giờ trước khi đăng tải chính thức.</span>
+</div>
+</section>
+</form>
+<!-- Cột Phải: Sidebar Mẹo & Quy Chuẩn Bếp (4 cột) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg lg:sticky lg:top-24">
+<!-- CARD 1: Quy chuẩn bếp nhà -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#9E3F1D] text-[24px]">verified</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Quy chuẩn bếp nhà</h4>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[#9E3F1D] shrink-0 font-bold text-label-md">01</span>
+<div>
+<p class="font-label-lg text-label-lg text-[#9E3F1D]">Chỉ dẫn dễ hiểu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Viết các bước rõ ràng để người mới cũng tự tin vào bếp nấu thành công.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[#9E3F1D] shrink-0 font-bold text-label-md">02</span>
+<div>
+<p class="font-label-lg text-label-lg text-[#9E3F1D]">Nguyên liệu dễ tìm</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ưu tiên các loại rau củ, gia vị thân thuộc của chợ cóc, chợ làng Việt.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[#9E3F1D] shrink-0 font-bold text-label-md">03</span>
+<div>
+<p class="font-label-lg text-label-lg text-[#9E3F1D]">Hình ảnh chân thực</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Khuyến khích ảnh mộc mạc từ chính mâm cơm thường nhật của gia đình bạn.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Quy trình xét duyệt -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#9E3F1D] text-[24px]">receipt_long</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Quy trình xét duyệt</h4>
+</div>
+<div class="relative pl-6 flex flex-col gap-space-md">
+<!-- Đường timeline mảnh -->
+<div class="absolute left-2.5 top-2 bottom-3 w-0.5 bg-outline/20"></div>
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-[#C2542D] ring-4 ring-surface-container-low"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Bước 1: Bạn gửi công thức</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lưu vào hàng đợi duyệt biên tập.</span>
+</div>
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-[#9E3F1D] ring-4 ring-surface-container-low"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Bước 2: Bếp thẩm định nêm nếm</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Định lượng khẩu phần và rà soát thứ tự nấu.</span>
+</div>
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-low"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Bước 3: Xuất bản lên Món Mới</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lan tỏa công thức đến hàng triệu gian bếp Việt.</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: Hỗ trợ bạn -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-[#9E3F1D]">
+<span class="material-symbols-outlined text-[22px]">contact_support</span>
+<h4 class="font-label-lg text-label-lg font-bold">Cần hỗ trợ nhập liệu?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Bạn gặp khó khăn khi viết công thức hay muốn gửi qua bản thảo tay?
+          </p>
+<a class="inline-flex items-center gap-1.5 text-label-md font-label-md text-[#9E3F1D] hover:underline min-h-[44px] focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] rounded px-1" href="mailto:lienhe@bepnhaminh.vn">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+            lienhe@bepnhaminh.vn
+          </a>
+</div>
+<!-- Hình ảnh nghệ thuật mâm cơm mộc mạc -->
+<div class="rounded-xl overflow-hidden shadow-sm relative group">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cozy Vietnamese family meal on a handwoven bamboo tray with clay pot braised dishes, a fresh bowl of sweet-and-sour vegetable soup, chopsticks, natural golden hour kitchen lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2J5kvJzlPsid0AkRrjZAgpJOvqDKxM4a8t6p7C7ZNF2cVz4xbKb6izdNCp1Q-Xy3SDmh4ohM6fFBdtDs05Mu1YMmoEuMuAT33MSHxWWDhnsDksK2TIrzuA-9xjJidAVld9-rLYl2fjyfyhGe8Sp2J1xKoF96ho1O95AjTga_qKAbJY1Pkanq0xE28oNbWh7wEUwRHUopvsEoEravGz5kXcWt2bvwqURIJA1GRCQnA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-space-md">
+<span class="text-white font-label-md text-label-md italic">
+              "Mỗi công thức là một câu chuyện ấm êm bên mâm cơm chiều."
+            </span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<script>
+  function addIngredientRow() {
+    const list = document.getElementById('ingredientsList');
+    const newRow = document.createElement('div');
+    newRow.className = 'grid grid-cols-1 md:grid-cols-12 gap-space-xs md:gap-space-md items-center bg-surface-container-low/60 p-2.5 md:p-2 rounded-lg ingredient-row animate-fade-in';
+    newRow.innerHTML = `
+      <div class="md:col-span-6">
+        <input type="text" placeholder="Tên nguyên liệu" required class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" />
+      </div>
+      <div class="md:col-span-3">
+        <input type="text" placeholder="Số lượng" required class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" />
+      </div>
+      <div class="md:col-span-2">
+        <input type="text" placeholder="Đơn vị" class="w-full min-h-[44px] px-space-md rounded bg-surface font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-1" />
+      </div>
+      <div class="md:col-span-1 flex justify-end md:justify-center">
+        <button type="button" onclick="removeIngredientRow(this)" aria-label="Xóa nguyên liệu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]">
+          <span class="material-symbols-outlined text-[20px]">delete</span>
+        </button>
+      </div>
+    `;
+    list.appendChild(newRow);
+  }
+
+  function removeIngredientRow(btn) {
+    const rows = document.querySelectorAll('.ingredient-row');
+    if (rows.length <= 1) {
+      alert('Vui lòng giữ lại ít nhất 1 nguyên liệu chính của món!');
+      return;
+    }
+    const row = btn.closest('.ingredient-row');
+    if (row) row.remove();
+  }
+
+  function addStepBlock() {
+    const container = document.getElementById('cookingStepsContainer');
+    const stepCount = container.querySelectorAll('.step-block').length + 1;
+    const newStep = document.createElement('div');
+    newStep.className = 'bg-surface-container-low/50 p-space-md rounded-xl flex flex-col gap-space-sm step-block';
+    newStep.innerHTML = `
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full bg-[#C2542D] text-white flex items-center justify-center font-bold text-label-sm">${stepCount}</span>
+          <span class="font-headline-sm text-headline-sm text-[#9E3F1D]">Bước ${stepCount}: Thao tác tiếp theo</span>
+        </div>
+        <button type="button" onclick="removeStepBlock(this)" aria-label="Xóa bước này" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-outline hover:text-[#B42318] transition-colors rounded hover:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-[#9E3F1D]">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <textarea
+          rows="3"
+          maxlength="500"
+          placeholder="Mô tả cụ thể cách thực hiện của bước này..."
+          class="w-full p-space-md rounded-lg bg-surface font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-[#9E3F1D] focus:ring-offset-2 transition-all shadow-inner leading-relaxed"
+          oninput="updateStepCount(this, 500)"
+        ></textarea>
+        <div class="flex justify-between items-center text-label-sm font-label-sm">
+          <span class="text-outline">Mẹo: ghi rõ nhiệt độ lửa và gia vị</span>
+          <span class="text-outline char-counter">0/500 ký tự</span>
+        </div>
+      </div>
+    `;
+    container.appendChild(newStep);
+  }
+
+  function removeStepBlock(btn) {
+    const blocks = document.querySelectorAll('.step-block');
+    if (blocks.length <= 1) {
+      alert('Công thức cần ít nhất 1 bước hướng dẫn!');
+      return;
+    }
+    const block = btn.closest('.step-block');
+    if (block) {
+      block.remove();
+      renumberSteps();
+    }
+  }
+
+  function renumberSteps() {
+    const blocks = document.querySelectorAll('.step-block');
+    blocks.forEach((b, index) => {
+      const idx = index + 1;
+      const badge = b.querySelector('.w-7');
+      if (badge) badge.innerText = idx;
+      const titleSpan = b.querySelector('.text-\\[\\#9E3F1D\\]');
+      if (titleSpan) {
+        const textParts = titleSpan.innerText.split(':');
+        const desc = textParts.length > 1 ? textParts[1] : ' Hướng dẫn nấu';
+        titleSpan.innerText = `Bước ${idx}:${desc}`;
+      }
+    });
+  }
+
+  function updateStepCount(textarea, max) {
+    const parent = textarea.closest('.step-block');
+    const counter = parent.querySelector('.char-counter');
+    if (counter) {
+      counter.innerText = `${textarea.value.length}/${max} ký tự`;
+      if (textarea.value.length >= max) {
+        counter.classList.add('text-[#B42318]');
+      } else {
+        counter.classList.remove('text-[#B42318]');
+      }
+    }
+  }
+
+  function submitRecipe() {
+    const checkbox = document.getElementById('copyrightAgree');
+    const alertBox = document.getElementById('formAlert');
+    if (!checkbox.checked) {
+      alertBox.classList.remove('hidden');
+      checkbox.focus();
+      return;
+    }
+    alertBox.classList.add('hidden');
+    alert('Bếp Nhà Mình đã nhận được công thức ấm áp của bạn! Ban biên tập sẽ xem xét và đăng tải trong 24–48 giờ. Cảm ơn bạn rất nhiều!');
+  }
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-lg"><div class="max-w-md"><div class="flex flex-col mb-space-xs"><span class="font-headline-sm text-headline-sm text-primary">Bếp Nhà Mình</span><span class="font-label-sm text-label-sm text-on-surface-variant">Hương vị cơm nhà</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">Dự án cộng đồng phi thương mại nhằm gìn giữ, lưu trữ và tôn vinh những hương vị cơm nhà ấm cúng của mỗi gia đình Việt Nam.</p></div><div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md md:gap-space-lg"><nav class="flex flex-wrap items-center gap-space-md" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="chinh-sach-rieng-tu" href="#">Chính sách riêng tư</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="gop-y-gian-bep" href="#">Góp ý gian bếp</a></nav><a class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-space-xs" href="mailto:lienhe@bepnhaminh.vn"><span class="material-symbols-outlined text-[16px]">mail</span>lienhe@bepnhaminh.vn</a></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center sm:text-left"><p class="font-body-sm text-body-sm text-on-surface-variant">Website cá nhân, phi thương mại. Nấu với trọn vẹn yêu thương.</p><p class="font-label-sm text-label-sm text-on-surface-variant/80">© 2024 Bếp Nhà Mình. Lan tỏa ấm áp gian bếp Việt.</p></div></div></footer></body></html>
