@@ -14,6 +14,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/hoi-bep`, changeFrequency: "daily", priority: 0.8 },
     { url: `${siteUrl}/gui-cong-thuc`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${siteUrl}/chinh-sach-rieng-tu`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${siteUrl}/gioi-thieu`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${siteUrl}/quy-dinh-cong-dong`, changeFrequency: "monthly", priority: 0.5 },
     ...menus.map((menu) => ({
       url: `${siteUrl}/thuc-don-tuan/${menu.slug}`,
       lastModified: new Date(`${menu.publishedAt}T00:00:00+07:00`),

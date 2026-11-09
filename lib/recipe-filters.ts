@@ -1,4 +1,5 @@
 import type { RecipeFrontmatter } from "./recipe-schema";
+import { normalizeSearch } from "./normalize";
 
 export const categories = ["mon-canh", "mon-chinh", "mon-chay", "mon-cuon"] as const;
 export const difficulties = ["de", "trung-binh", "kho"] as const;
@@ -54,12 +55,8 @@ export function recipeFiltersHref(filters: RecipeFilters) {
   return "/cong-thuc" + (params.size ? `?${params}` : "");
 }
 
-function normalize(value: string) {
-  return value.toLocaleLowerCase("vi").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d");
-}
-
 export function filterRecipes(recipes: RecipeFrontmatter[], filters: RecipeFilters, favorites: string[]) {
-  const query = normalize(filters.q.trim());
+  const query = normalizeSearch(filters.q.trim());
   const favoriteSet = new Set(favorites);
   return recipes.filter((recipe) => {
     if (filters.category && recipe.category !== filters.category) return false;
@@ -69,7 +66,7 @@ export function filterRecipes(recipes: RecipeFrontmatter[], filters: RecipeFilte
     if (filters.favoritesOnly && !favoriteSet.has(recipe.slug)) return false;
     if (!query) return true;
     return [recipe.title, recipe.description, ...recipe.tags, ...recipe.ingredients.map((ingredient) => ingredient.name)]
-      .some((value) => normalize(value).includes(query));
+      .some((value) => normalizeSearch(value).includes(query));
   }).sort((a, b) => {
     if (filters.sort === "nhanh-nhat") return a.cookTime - b.cookTime;
     if (filters.sort === "ten-mon") return a.title.localeCompare(b.title, "vi");
