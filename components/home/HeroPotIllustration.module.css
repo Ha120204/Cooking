@@ -1,0 +1,83 @@
+.scene {
+  position: relative;
+  display: flex;
+  width: 340px;
+  height: 340px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.halo {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: var(--color-bep-primary-light);
+  animation: halo-breathe 5s ease-in-out infinite;
+}
+
+.potCircle {
+  position: relative;
+  display: flex;
+  width: 256px;
+  height: 256px;
+  align-items: center;
+  justify-content: center;
+  border: 14px solid var(--color-bep-surface);
+  border-radius: 50%;
+  background: var(--color-bep-surface);
+  box-shadow: var(--shadow-bep-hover);
+}
+
+.potSvg { width: 228px; height: 228px; overflow: visible; }
+.steam { stroke: #C2542D; stroke-width: 2.8; opacity: .55; }
+.steamOne { animation: steam-rise 3.4s ease-out -.4s infinite; }
+.steamTwo { animation: steam-rise 3.8s ease-out -1.7s infinite; }
+.steamThree { animation: steam-rise 3.6s ease-out -2.8s infinite; }
+.lid {
+  transform-box: fill-box;
+  transform-origin: 50% 80%;
+  animation: lid-bubble 4s ease-in-out infinite;
+}
+
+.ingredient {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  filter: drop-shadow(0 2px 3px rgb(38 33 30 / 0.08));
+}
+.leaf { top: 33px; left: 30px; color: #9E3F1D; animation: ingredient-float 7s ease-in-out -.7s infinite; }
+.chili { top: 43px; right: 32px; color: #C2542D; animation: ingredient-float 6.5s ease-in-out -3.2s infinite; }
+.garlic { bottom: 43px; left: 25px; color: #C2542D; animation: ingredient-float 7.6s ease-in-out -2s infinite; }
+.lime { right: 26px; bottom: 49px; color: #9E3F1D; animation: ingredient-float 6.8s ease-in-out -4.4s infinite; }
+
+@keyframes steam-rise {
+  0% { transform: translate(0, 4px); opacity: 0; }
+  20% { opacity: .55; }
+  70% { opacity: .35; }
+  100% { transform: translate(5px, -20px); opacity: 0; }
+}
+@keyframes lid-bubble {
+  0%, 62%, 100% { transform: translateY(0) rotate(0); }
+  70% { transform: translateY(-4px) rotate(2.5deg); }
+  78% { transform: translateY(0) rotate(-1deg); }
+  85% { transform: translateY(-2px) rotate(1deg); }
+}
+@keyframes ingredient-float {
+  0%, 100% { transform: translate(0, 0) rotate(-3deg); opacity: .8; }
+  50% { transform: translate(4px, -8px) rotate(4deg); opacity: 1; }
+}
+@keyframes halo-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halo, .steam, .lid, .ingredient {
+    animation: none !important;
+    transform: none !important;
+  }
+  .steam { opacity: .55; }
+  .ingredient { opacity: 1; }
+}

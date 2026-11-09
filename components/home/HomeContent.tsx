@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ChefHat, Clock3, CookingPot, Search, Shuffle, Sparkles, UtensilsCrossed } from "lucide-react";
+import { ArrowRight, ChefHat, Clock3, Search, Shuffle, Sparkles, UtensilsCrossed } from "lucide-react";
 import type { RecipeFrontmatter } from "@/lib/recipe-schema";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
 import { useFeaturedMenu } from "@/components/weekly/useFeaturedMenu";
 import type { WeeklyMenuSummary } from "@/lib/weekly-selection";
 import type { RecipeStat } from "@/lib/supabase/types";
+import { HeroPotIllustration } from "./HeroPotIllustration";
 
 type HomeContentProps = {
   recipes: RecipeFrontmatter[];
@@ -63,8 +64,7 @@ export function HomeContent({ recipes, menus }: HomeContentProps) {
             </div>
           </div>
           <div className="relative hidden min-h-[340px] items-center justify-center lg:flex" aria-hidden="true">
-            <div className="absolute size-80 rounded-full bg-bep-primary-light" />
-            <div className="relative flex size-64 items-center justify-center rounded-full border-[14px] border-white bg-bep-surface shadow-bep-hover"><CookingPot size={118} strokeWidth={1.25} className="text-bep-primary-dark" /></div>
+            <HeroPotIllustration />
             <div className="absolute bottom-4 right-4 rounded-bep-lg bg-bep-surface p-4 shadow-bep-card"><span className="text-sm font-semibold text-bep-ink">Ấm bụng, ấm lòng ♡</span></div>
           </div>
         </div>
