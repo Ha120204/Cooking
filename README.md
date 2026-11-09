@@ -4,6 +4,8 @@ Website cộng đồng nấu ăn cá nhân, phi thương mại. M1b đã thay tr
 
 M1c bổ sung `/cong-thuc` (tìm kiếm, lọc theo URL, món đã lưu) và `/hom-nay-an-gi` (bốc món từ MDX), cùng `sitemap.xml` và `robots.txt`.
 
+Phần mở rộng M1c có `/thuc-don-tuan`, `/thuc-don-tuan/[slug]` từ MDX và `/chinh-sach-rieng-tu`. Trang thực đơn chọn tuần theo ngày tại Việt Nam; nếu không có tuần hiện tại, chọn tuần gần nhất. Bình luận thực đơn đang là UI tĩnh, chờ M2. Tính năng Thử thách tuần đã được bỏ khỏi dự án.
+
 ## Chạy local
 
 1. `npm install`
@@ -52,6 +54,7 @@ Các trang chưa có export Stitch riêng sẽ được dựng sau khi nhận th
 ## Quyết định đã chốt cho M2
 
 - Bình luận, câu hỏi và câu trả lời hiển thị ngay; dev hậu kiểm bằng cột `hidden`. Chỉ công thức người dùng gửi có `status = pending`.
+- Khi triển khai Supabase ở M2, `comments.target_type` chỉ nhận `recipe` và `weekly_menu`.
 - Lượt thích là thao tác bật/tắt: server thêm hoặc xóa theo `(recipe_slug, visitor_hash)`; chấm sao được đổi bằng upsert theo cùng khóa. Các thao tác cập nhật/xóa chỉ dùng key có quyền cao trên server.
 - Đọc `recipe_stats`, bình luận và hỏi đáp bằng yêu cầu không cache; nội dung MDX vẫn build từ file.
 - Rate limit dùng RPC SQL tăng bộ đếm nguyên tử: `INSERT ... ON CONFLICT DO UPDATE SET hits = hits + 1 RETURNING hits`. Chỉ `service_role` được `EXECUTE`. Dọn bucket cũ bằng Supabase Cron, hoặc Vercel Cron nếu không dùng được Supabase Cron.

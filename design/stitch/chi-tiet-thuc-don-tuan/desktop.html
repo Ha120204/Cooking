@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-low":"#fcf1ec","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface-container":"#f7ece7","inverse-on-surface":"#f9efe9","on-primary-fixed-variant":"#832701","on-primary":"#ffffff","on-secondary-fixed":"#00210e","on-primary-fixed":"#390c00","secondary":"#2d6a43","on-surface-variant":"#57423b","secondary-container":"#b0f2bf","surface-variant":"#ebe0db","surface-bright":"#fff8f5","tertiary-container":"#9f6c00","primary-fixed":"#ffdbd0","primary":"#a13c17","surface":"#fff8f5","secondary-fixed":"#b0f2bf","on-secondary":"#ffffff","primary-fixed-dim":"#ffb59d","on-secondary-container":"#337048","primary-container":"#c2542d","on-primary-container":"#fffeff","on-tertiary-container":"#ffffff","surface-container-highest":"#ebe0db","tertiary-fixed-dim":"#ffba45","tertiary":"#7f5500","inverse-surface":"#352f2c","tertiary-fixed":"#ffddb0","on-error":"#ffffff","on-error-container":"#93000a","on-background":"#1f1b18","surface-tint":"#a33e18","inverse-primary":"#ffb59d","on-surface":"#1f1b18","surface-container-high":"#f1e6e1","error":"#ba1a1a","outline":"#8a726a","surface-dim":"#e2d8d3","on-tertiary-fixed":"#281800","background":"#fff8f5","on-secondary-fixed-variant":"#10512d","secondary-fixed-dim":"#95d5a5","on-tertiary-fixed-variant":"#614000","outline-variant":"#dec0b7","on-tertiary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-md":"2rem","gutter-lg":"2rem","gutter":"1.5rem","gutter-sm":"1rem","space-xl":"2.5rem","margin":"1rem","margin-lg":"3.5rem","space-lg":"1.5rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-lg-mobile":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"body-cooking-step":["Be Vietnam Pro"],"display-mobile":["Be Vietnam Pro"],"display":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"]},"fontSize":{"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"body-cooking-step":["20px",{"lineHeight":"32px","letterSpacing":"0.01em","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"display":["44px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"42px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(78,64,53,0.05)]"><div class="h-20 max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-gutter"><a class="flex items-center gap-space-sm group text-left" data-path="trang-chu" href="#"><div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors"><span class="material-symbols-outlined text-[24px]">soup_kitchen</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Bếp Nhà Mình</span><span class="font-label-sm text-label-sm text-on-surface-variant font-normal tracking-wide mt-0.5">Hương vị cơm nhà</span></div></a><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-lg"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="cong-thuc" href="#">Công thức</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="thuc-don-tuan" href="#">Thực đơn tuần</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="thu-thach-tuan" href="#">Thử thách tuần</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="hoi-bep" href="#">Hỏi bếp</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low text-secondary hover:bg-secondary hover:text-on-secondary transition-all font-label-lg text-label-lg min-h-[44px]" data-path="hom-nay-an-gi" href="#"><span class="material-symbols-outlined text-[18px]">restaurant</span><span>Hôm nay ăn gì?</span></a><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary transition-all font-label-lg text-label-lg min-h-[44px] shadow-[0_2px_8px_rgba(194,84,45,0.2)]" data-path="gop-cong-thuc" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="hidden md:inline">Góp công thức</span><span class="md:hidden">Góp món</span></a><a aria-label="Tài khoản cá nhân" class="flex items-center justify-center p-0.5 rounded-full hover:ring-2 hover:ring-outline-variant transition-all" data-path="ho-so-bep-truong" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Week Pagination Bar -->
+<section class="w-full bg-surface-container-low/70 py-space-sm">
+<div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-label-md font-label-md">
+<!-- Breadcrumb -->
+<nav aria-label="Đường dẫn trang" class="flex items-center gap-2 text-on-surface-variant">
+<a class="hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" data-path="trang-chu" href="#">Trang chủ</a>
+<span class="text-on-surface-variant/40">/</span>
+<a class="hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" data-path="thuc-don-tuan" href="#">Thực đơn tuần</a>
+<span class="text-on-surface-variant/40">/</span>
+<span class="text-primary font-bold">Tuần 9–15/11</span>
+</nav>
+<!-- Week Switcher Links (#9E3F1D accent) -->
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center gap-1.5 text-primary hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded py-1 px-2 min-h-[44px]" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Tuần trước (2–8/11)</span>
+</a>
+<span class="text-outline-variant">|</span>
+<a class="inline-flex items-center gap-1.5 text-primary hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded py-1 px-2 min-h-[44px]" href="#">
+<span>Tuần kế tiếp (16–22/11)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Hero Editorial Header Section -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Text Column -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-md text-label-md tracking-wider uppercase">
+              ✦ THỰC ĐƠN TUẦN NÀY
+            </span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-[#ffba45]">star</span>
+<span>4.9 (128 đánh giá)</span>
+</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight font-bold">
+            Thực đơn tuần 9–15/11: Mâm cơm giao mùa ấm áp
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Gợi ý mâm cơm 7 ngày tròn vị, vừa đủ chất xơ vừa ấm bụng những ngày se gió. Mỗi ngày đều phối hợp hài hòa giữa món mặn đậm đà và món canh thanh mát.
+          </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<button class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#C2542D] text-white font-label-lg text-label-lg min-h-[48px] shadow-sm hover:opacity-95 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+<span>Lưu thực đơn tuần này</span>
+</button>
+<button class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg min-h-[48px] shadow-sm hover:bg-surface-container transition-all focus:outline-none focus:ring-2 focus:ring-primary" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span>In thực đơn đi chợ</span>
+</button>
+</div>
+</div>
+<!-- Visual Bento Accent Card -->
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high shadow-md p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-semibold">Tóm tắt dinh dưỡng tuần</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">eco</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center py-space-xs">
+<div class="rounded-lg bg-surface-container-lowest p-2 shadow-sm">
+<span class="block text-primary font-headline-sm text-headline-sm font-bold">7</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Bữa mặn</span>
+</div>
+<div class="rounded-lg bg-surface-container-lowest p-2 shadow-sm">
+<span class="block text-secondary font-headline-sm text-headline-sm font-bold">7</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Món canh</span>
+</div>
+<div class="rounded-lg bg-surface-container-lowest p-2 shadow-sm">
+<span class="block text-tertiary font-headline-sm text-headline-sm font-bold">100%</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Cơm nhà</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+              Thực đơn được cân bằng hài hòa giữa đạm động vật, đậu hạt và rau xanh bản địa theo mùa gió đầu đông.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Quick Anchor Pill Bar -->
+<section class="sticky top-20 z-40 w-full bg-surface/95 backdrop-blur-md shadow-sm py-3 transition-shadow">
+<div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1">
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#thu-hai">Thứ Hai</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#thu-ba">Thứ Ba</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#thu-tu">Thứ Tư</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#thu-nam">Thứ Năm</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#thu-sau">Thứ Sáu</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#thu-bay">Thứ Bảy</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center focus:outline-none focus:ring-2 focus:ring-primary" href="#chu-nhat">Chủ Nhật</a>
+<a class="whitespace-nowrap px-4 py-2.5 rounded-full bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim transition-colors font-label-md text-label-md min-h-[44px] inline-flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-secondary ml-auto" href="#danh-sach-di-cho">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Danh sách đi chợ tuần</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Main Content Layout (7 Days + Sticky Grocery Assistant) -->
+<section class="w-full py-space-xl">
+<div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- 7-Day Meal Plan Stream (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- THỨ HAI -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="thu-hai">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 1</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Thứ Hai — Khởi đầu tuần mới ngọt lành</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">wb_sunny</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món chính</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Thịt kho trứng nước dừa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Đậm đà, béo ngậy, hạt nước dừa óng ả đưa cơm.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món canh</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Canh rau ngót thịt nạc</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Thanh nhiệt, giải độc, nước canh ngọt tự nhiên từ thịt băm.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món rau / Phụ</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Dưa leo chẻ giòn tan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Chấm cùng nước thịt kho đậm đà, giải ngấy hoàn hảo.</p>
+</div>
+<span class="text-on-surface-variant/70 font-label-sm text-label-sm italic pt-2">Ăn kèm thanh mát</span>
+</div>
+</div>
+<!-- Tip of the day -->
+<div class="rounded-lg bg-surface-container p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">lightbulb</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-primary">Mẹo ngày thứ hai:</strong> Nấu dư một chút thịt kho để hương vị ngấm đậm đà sang trưa hôm sau mang đi làm, cơm trưa vẫn thơm mềm chuẩn vị nhà.
+              </p>
+</div>
+</article>
+<!-- THỨ BA -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="thu-ba">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 2</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Thứ Ba — Đậm đà phong vị quê nhà</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">soup_kitchen</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món chính</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Cá lóc kho tộ</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Thơm lừng tiêu sọ, thịt cá chắc ngọt sánh quyện màu cánh gián.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món canh</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Canh chua cá kiểu bếp nhà</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Chua thanh dịu mát từ nước me dầm, thơm bạc hà bắp chuối.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món rau</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Rau muống luộc chấm tương Bần</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ngọn rau xanh ngắt giòn sần sật, hòa quyện tương nếp béo bùi.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- THỨ TƯ -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="thu-tu">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 3</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Thứ Tư — Thanh đạm nhẹ bụng giữa tuần</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">spa</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món chính</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Đậu hũ sốt cà chua hành hoa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vàng giòn bên ngoài, mềm bùi bên trong sốt chua ngọt đưa cơm.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món canh</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Canh mồng tơi nấu tôm tươi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vị ngọt thanh dịu mát, bổ sung khoáng chất lành dạ cho gia đình.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món xào</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Bí đỏ xào tỏi thơm lừng</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Miếng bí đỏ dẻo mềm, ngậy thơm mùi tỏi đập dập đảo lửa lớn.</p>
+</div>
+<span class="text-on-surface-variant/70 font-label-sm text-label-sm italic pt-2">Dễ làm trong 10 phút</span>
+</div>
+</div>
+</article>
+<!-- THỨ NĂM -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="thu-nam">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 4</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Thứ Năm — Vị cay ấm nồng ngày se gió</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_fire_department</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món chính</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Gà kho sả ớt lá chanh</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cay ấm, thịt gà đồi săn chắc quyện hương thơm nồng của sả băm.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món canh</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Canh bí đỏ thịt bằm</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ngọt bùi, bổ dưỡng, làm dịu êm vị cay nồng của món chính.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món rau</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Bắp cải luộc trứng dầm mắm</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vị ngọt tự nhiên của bắp cải quyện lòng đỏ trứng gà bùi béo.</p>
+</div>
+<span class="text-on-surface-variant/70 font-label-sm text-label-sm italic pt-2">Món ăn ký ức tuổi thơ</span>
+</div>
+</div>
+</article>
+<!-- THỨ SÁU -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="thu-sau">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 5</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Thứ Sáu — Nhanh gọn kết thúc tuần làm việc</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món chính</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Trứng chiên thịt bằm nấm rơm</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Xốp mềm, nhanh gọn chỉ 15 phút mà vẫn đầy đủ dưỡng chất.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món canh</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Canh sườn non nấu sấu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Chua thanh mát dạ, vị sấu dầm giải tỏa mọi mệt mỏi sau giờ làm việc.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món xào</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Rau cải ngọt xào thịt bò</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cải ngọt xanh giòn, thịt bò mềm thơm ngậy dầu hào tỏi ớt.</p>
+</div>
+<span class="text-on-surface-variant/70 font-label-sm text-label-sm italic pt-2">Bổ sung chất xơ tươi</span>
+</div>
+</div>
+</article>
+<!-- THỨ BẢY -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="thu-bay">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 6</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Thứ Bảy — Thảnh thơi vào bếp đãi cả nhà</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">dinner_dining</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món chính</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Sườn xào chua ngọt truyền thống</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bóng bẩy, quyện sốt giấm đường tỏi ớt thơm nức mũi.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món canh</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Canh cua mồng tơi mướp hương</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Gạch cua đóng tảng béo ngậy, ăn kèm cà pháo giòn tan.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món luộc</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Đậu bắp luộc chấm chao ớt</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Đậu bắp non ngọt mềm, chấm chao đỏ thơm nồng ấm áp.</p>
+</div>
+<span class="text-on-surface-variant/70 font-label-sm text-label-sm italic pt-2">Dân dã tròn vị</span>
+</div>
+</div>
+</article>
+<!-- CHỦ NHẬT -->
+<article class="scroll-mt-36 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md" id="chu-nhat">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Ngày 7</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Chủ Nhật — Sum vầy đầm ấm cuối tuần</h2>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">diversity_3</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Mâm lẩu hoặc Cơm niêu gia đình</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Cá chép giòn om dưa chua / Bò kho bánh mì</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Nồi lẩu bốc khói nghi ngút bên mâm cơm rộn rã tiếng cười nói của cả gia đình sum vầy ngày nghỉ.</p>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Cá chép om dưa</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Bò kho bánh mì</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">Món tráng miệng</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Chè hạt sen long nhãn thanh mát</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vị ngọt thanh từ đường phèn, hạt sen bở bùi kết hợp cùi nhãn giòn sần sật giúp giấc ngủ tối an lành.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:underline mt-space-sm pt-2 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span>Xem công thức tráng miệng</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Sticky Grocery Assistant (4 Columns) -->
+<aside class="lg:col-span-4 scroll-mt-28 sticky top-36 flex flex-col gap-space-md" id="danh-sach-di-cho">
+<div class="rounded-xl bg-surface-container p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-9 h-9 rounded-lg bg-[#C2542D] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">checklist</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-none">Danh mục đi chợ</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Chuẩn bị đủ cho 7 ngày</span>
+</div>
+</div>
+<button class="text-primary text-label-sm font-label-sm hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded p-1" onclick="document.querySelectorAll('.grocery-cb').forEach(c=&gt;c.checked=false)" type="button">Đặt lại</button>
+</div>
+<!-- Category 1: Thịt & Thủy hải sản -->
+<div class="flex flex-col gap-space-xs pt-1">
+<span class="text-primary font-label-md text-label-md font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">set_meal</span>
+<span>Thịt &amp; Hải sản</span>
+</span>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-1" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-1">Thịt ba chỉ rút sườn (800g)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-2" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-2">Thịt nạc băm nhuyễn (500g)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-3" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-3">Cá lóc đồng làm sạch (1 con ~ 800g)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-4" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-4">Gà ta thả vườn (nửa con ~ 700g)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-5" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-5">Sườn non heo tươi (600g)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-6" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-6">Cua đồng xay lọc sẵn (400g)</label>
+</li>
+</ul>
+</div>
+<!-- Category 2: Rau củ quả tươi -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="text-primary font-label-md text-label-md font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">nutrition</span>
+<span>Rau củ &amp; Đậu tươi</span>
+</span>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-7" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-7">Rau ngót, mồng tơi, rau muống (mỗi loại 1 bó)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-8" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-8">Bí đỏ hồ lô (1 quả vừa ~ 600g)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-9" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-9">Bắp cải tròn Đà Lạt (1 bắp)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-10" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-10">Đậu hũ mơ thanh mềm (4 bìa)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-11" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-11">Cà chua, dưa leo, đậu bắp non, mướp hương</label>
+</li>
+</ul>
+</div>
+<!-- Category 3: Gia vị trữ sẵn -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="text-primary font-label-md text-label-md font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">kitchen</span>
+<span>Gia vị &amp; Đồ khô trữ sẵn</span>
+</span>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-12" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-12">Nước dừa tươi xiêm (2 quả)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-13" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-13">Trứng vịt, trứng gà ta (10 quả)</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-14" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-14">Hành tím củ, tỏi Lý Sơn, sả cây, ớt hiểm, me vắt</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="grocery-cb w-5 h-5 rounded text-secondary focus:ring-primary cursor-pointer accent-[#2d6a43]" id="g-15" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface cursor-pointer select-none" for="g-15">Hạt sen khô, long nhãn Hưng Yên</label>
+</li>
+</ul>
+</div>
+<div class="pt-space-xs">
+<button class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md min-h-[44px] hover:bg-surface-container-highest transition-colors focus:outline-none focus:ring-2 focus:ring-primary" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Tải bảng đi chợ tuần này (PDF)</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- Community Warm Comments & Feedback Section -->
+<section class="w-full py-space-xl bg-surface-container-low/50">
+<div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Left: Comments List (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              Cảm nhận &amp; Góp ý mâm cơm tuần này (24 lời sẻ chia)
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Bạn đã nấu món nào trong thực đơn tuần này chưa? Hãy chia sẻ cảm nhận để cùng truyền lửa cho các gian bếp nhé!
+            </p>
+</div>
+<!-- Comment Stream (Warm kitchen vibe, no personal avatars) -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Chị Thảo Lê</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Hôm qua lúc 19:42</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Mâm cơm thứ Ba canh chua cá và cá kho tộ chồng mình khen mãi, nước canh chua thanh mát đúng vị mẹ nấu ngày xưa!
+              </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Mẹ Bắp</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Hôm kia lúc 12:15</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Thực đơn tuần này rất hợp ý nhà mình, món đậu hũ sốt cà thứ Tư thanh nhẹ dễ ăn sau hai ngày ăn thịt cá.
+              </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Bác Bảy</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">3 ngày trước</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Gợi ý thêm chút lá lốt vào món canh ngao/tôm ngày thứ Tư thì thơm phức hơn nữa cháu nhé.
+              </p>
+</div>
+</div>
+</div>
+<!-- Right: Simple Comment Form (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                Gửi cảm nhận hoặc đóng góp món cho thực đơn tuần
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                Góp thêm một công thức ngon để mâm cơm gia đình Việt thêm đủ đầy ấm áp.
+              </p>
+</div>
+<form class="flex flex-col gap-space-md" id="comment-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã sẻ chia cùng gian bếp!'); this.reset();">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="author-name">
+                  Tên hiển thị của bạn *
+                </label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="author-name" name="author-name" placeholder="Ví dụ: Mẹ Bin, Bạn Trâm, Anh Khoa..." required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="comment-text">
+                  Lời sẻ chia / Mâm cơm nhà bạn *
+                </label>
+<textarea class="w-full p-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-y" id="comment-text" name="comment-text" placeholder="Hôm nay nhà bạn nấu món gì? Có mẹo vặt nào muốn mách cùng mọi người không..." required="" rows="4"></textarea>
+</div>
+<button class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#C2542D] text-white font-label-lg text-label-lg min-h-[48px] hover:opacity-95 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Gửi cảm nhận lên Bếp</span>
+</button>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Gian bếp phi thương mại, trân quý mọi đóng góp chân thành.</span>
+</div>
+</form>
+</div>
+<!-- Weekly Schedule Reminder Box -->
+<div class="rounded-xl bg-surface-container p-space-md flex items-center gap-space-md">
+<span class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">calendar_month</span>
+</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Cập nhật vào sáng Chủ Nhật!</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Thực đơn tuần mới luôn được nhóm đầu bếp gia đình lên sẵn vào mỗi 8h sáng Chủ Nhật để bạn thảnh thơi chuẩn bị đi chợ.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low pt-space-xl pb-space-lg mt-space-xl shadow-[0_-2px_12px_rgba(78,64,53,0.03)]"><div class="max-w-[1240px] mx-auto px-margin md:px-margin-md lg:px-margin-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg pb-space-lg items-start"><div class="md:col-span-6 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Bếp Nhà Mình</span><span class="px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Phi thương mại</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg leading-relaxed">Góc nhỏ lưu giữ và chia sẻ những công thức giản dị, ấm nồng từ gian bếp gia đình Việt Nam. Nơi lưu giữ ký ức vị giác mẹ nấu và những bữa cơm quây quần ấm cúng.</p></div><div class="md:col-span-6 flex flex-col md:items-end justify-between gap-space-md"><div class="flex flex-wrap gap-space-lg items-center"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="chinh-sach-rieng-tu" href="#">Chính sách riêng tư</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="gop-y-gian-bep" href="#">Góp ý gian bếp</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-secondary-fixed-variant transition-colors flex items-center gap-1" href="mailto:lienhe@bepnhaminh.vn"><span class="material-symbols-outlined text-[16px]">mail</span>lienhe@bepnhaminh.vn</a></div><div class="font-label-sm text-label-sm text-on-surface-variant/80 flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-primary">favorite</span><span>Gian bếp ấm, lòng người an yên</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm bg-surface-container-high/40 rounded-xl px-space-md py-space-sm"><p>© 2024 Bếp Nhà Mình. Nấu với trọn vẹn yêu thương.</p><p class="font-label-sm text-label-sm text-on-surface-variant/70">Dành cho những bữa cơm quây quần gia đình Việt</p></div></div></footer></body></html>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Heart, House, Search, Soup } from "lucide-react";
 
-type MobileNavProps = { active?: "home" | "recipe" | "random" };
+type MobileNavProps = { active?: "home" | "recipe" | "random" | "weekly" | "privacy" };
 
 export function MobileNav({ active = "home" }: MobileNavProps) {
   const tabs = [

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChefHat, CookingPot, Search, Sparkles } from "lucide-react";
 
-type HeaderProps = { active?: "home" | "recipe" | "random" };
+type HeaderProps = { active?: "home" | "recipe" | "random" | "weekly" | "privacy" };
 
 export function Header({ active = "home" }: HeaderProps) {
   return (
@@ -19,7 +19,8 @@ export function Header({ active = "home" }: HeaderProps) {
 
         <nav aria-label="Điều hướng chính" className="hidden items-center gap-6 xl:flex">
           <Link href="/cong-thuc" aria-current={active === "recipe" ? "page" : undefined} className={"min-h-11 content-center text-sm font-semibold hover:text-bep-primary-dark " + (active === "recipe" ? "text-bep-primary-dark" : "text-bep-smoke")}>Công thức</Link>
-          {["Thực đơn tuần", "Thử thách tuần", "Hỏi bếp"].map((label) => <span key={label} aria-disabled="true" title="Sắp mở" className="cursor-not-allowed py-2 text-sm font-semibold text-bep-smoke/75">{label}</span>)}
+          <Link href="/thuc-don-tuan" aria-current={active === "weekly" ? "page" : undefined} className={"min-h-11 content-center text-sm font-semibold hover:text-bep-primary-dark " + (active === "weekly" ? "text-bep-primary-dark" : "text-bep-smoke")}>Thực đơn tuần</Link>
+          <span aria-disabled="true" title="Sắp mở ở M2" className="cursor-not-allowed py-2 text-sm font-semibold text-bep-smoke/75">Hỏi bếp</span>
         </nav>
 
         <div className="hidden items-center gap-3 sm:flex">

@@ -60,7 +60,7 @@ Font: Be Vietnam Pro qua `next/font/google`, subset `vietnamese`, weight 400/500
 
 ### Header và điều hướng
 
-Desktop: logo Bếp Nhà Mình, tìm kiếm, liên kết Công thức, Thực đơn tuần, Thử thách tuần, Hỏi bếp, Hôm nay ăn gì?, nút “+ Góp công thức”. Mobile: bottom navigation 4 tab Trang chủ (`/`), Tìm món (`/cong-thuc`), Yêu thích (`/cong-thuc?yeu-thich=1`; đọc localStorage), Góc bếp (`/hoi-bep`).
+Desktop: logo Bếp Nhà Mình, tìm kiếm, liên kết Công thức, Thực đơn tuần, Hỏi bếp, Hôm nay ăn gì?, nút “+ Góp công thức”. Mobile: bottom navigation 4 tab Trang chủ (`/`), Tìm món (`/cong-thuc`), Yêu thích (`/cong-thuc?yeu-thich=1`; đọc localStorage), Góc bếp (`/hoi-bep`). Không triển khai tính năng Thử thách tuần.
 
 ### RecipeCard
 

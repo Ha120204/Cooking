@@ -17,11 +17,12 @@ export function Footer() {
         <div className="flex flex-col gap-3 text-sm text-bep-smoke md:items-end">
           <p className="font-semibold text-bep-ink">Liên hệ &amp; trò chuyện</p>
           <Link href="/cong-thuc" className="min-h-11 content-center text-bep-primary-dark hover:underline">Khám phá công thức</Link>
+          <Link href="/thuc-don-tuan" className="min-h-11 content-center text-bep-primary-dark hover:underline">Thực đơn tuần</Link>
           <Link href="/hom-nay-an-gi" className="min-h-11 content-center text-bep-primary-dark hover:underline">Hôm nay ăn gì?</Link>
           <a className="min-h-11 content-center text-bep-primary-dark hover:underline" href="mailto:thanhthanhnguyenthi467@gmail.com">
             thanhthanhnguyenthi467@gmail.com
           </a>
-          <span aria-disabled="true" className="text-bep-smoke">Chính sách riêng tư đầy đủ: sắp mở</span>
+          <Link href="/chinh-sach-rieng-tu" className="min-h-11 content-center text-bep-primary-dark hover:underline">Chính sách riêng tư</Link>
         </div>
       </div>
       <div className="mx-auto mt-8 flex max-w-[1200px] flex-col gap-2 border-t border-bep-border pt-5 text-xs leading-5 text-bep-smoke md:flex-row md:justify-between">
