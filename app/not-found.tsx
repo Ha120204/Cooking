@@ -17,8 +17,8 @@ export default function NotFound() {
           <h1 className="mt-3 text-2xl font-bold leading-8 text-bep-ink sm:text-[32px] sm:leading-10">Trang này chưa có trong bếp</h1>
           <p className="mt-4 text-base leading-7 text-bep-smoke">Có thể đường dẫn đã thay đổi. Mời bạn trở về trang chủ hoặc tìm một món ngon khác.</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link href="/" className="inline-flex min-h-12 items-center justify-center rounded-bep-md bg-bep-primary px-6 font-semibold text-white hover:bg-bep-primary-dark">Về trang chủ</Link>
-            <Link href="/cong-thuc" className="inline-flex min-h-12 items-center justify-center rounded-bep-md border border-bep-border bg-bep-surface px-6 font-semibold text-bep-primary-dark hover:border-bep-border-hover hover:bg-bep-dim">Khám phá công thức</Link>
+            <Link href="/" className="bep-action bep-action-primary inline-flex min-h-12 items-center justify-center rounded-bep-md bg-bep-primary px-6 font-semibold text-white">Về trang chủ</Link>
+            <Link href="/cong-thuc" className="bep-action bep-action-outline inline-flex min-h-12 items-center justify-center rounded-bep-md border border-bep-border bg-bep-surface px-6 font-semibold text-bep-primary-dark">Khám phá công thức</Link>
           </div>
         </div>
       </main>

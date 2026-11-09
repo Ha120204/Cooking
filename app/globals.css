@@ -40,6 +40,9 @@ button, input, textarea { font: inherit; }
 
 .bep-motion,
 .bep-action,
+.bep-chip,
+.bep-link,
+.bep-focus-card,
 .bep-recipe-card,
 .bep-recipe-card img {
   transition-duration: var(--bep-motion-duration);
@@ -49,10 +52,22 @@ button, input, textarea { font: inherit; }
 .bep-action {
   transition-property: background-color, border-color, color, box-shadow, opacity, transform;
 }
-.bep-action:not(:disabled):active { transform: scale(0.98); }
-.bep-action:disabled { cursor: not-allowed; opacity: 0.6; }
+.bep-chip,
+.bep-link,
+.bep-focus-card { transition-property: background-color, border-color, color, box-shadow, opacity, transform; }
+.bep-action:not(:disabled):active,
+.bep-chip:not(:disabled):active { transform: scale(0.98); }
+.bep-link:active { opacity: 0.7; }
+.bep-action:disabled,
+.bep-chip:disabled { cursor: not-allowed; opacity: 0.6; }
 .bep-action-primary:not(:disabled):hover { background-color: var(--color-bep-primary-dark); }
 .bep-action-muted:not(:disabled):hover { background-color: var(--color-bep-primary-light); }
+.bep-action-outline:not(:disabled):hover { border-color: var(--color-bep-border-hover); background-color: var(--color-bep-dim); }
+.bep-chip:not(:disabled):hover { border-color: var(--color-bep-primary-dark); background-color: var(--color-bep-primary-light); }
+.bep-link:hover { color: var(--color-bep-primary-dark); text-decoration: underline; }
+.bep-crumb { display: inline-flex; min-height: 44px; align-items: center; border-radius: var(--radius-bep-sm); }
+.bep-focus-card:focus-within { box-shadow: 0 0 0 2px var(--color-bep-primary-dark), var(--shadow-bep-hover); }
+.bep-focus-card a:focus-visible { outline: none; }
 
 .bep-recipe-card {
   transition-property: box-shadow, transform;
@@ -84,6 +99,9 @@ button, input, textarea { font: inherit; }
 .bep-field-frame :is(input, textarea):focus-visible {
   outline: none;
 }
+.bep-field[aria-invalid="true"],
+.bep-field[aria-invalid="true"]:focus-within { border-color: var(--color-bep-error-border); }
+.bep-field[aria-invalid="true"]:focus-within { box-shadow: 0 0 0 3px rgb(217 56 41 / 0.18); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -6,6 +6,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { Footer } from "@/components/layout/Footer";
 import { QuestionList } from "@/components/forum/QuestionList";
 import { QuestionForm } from "@/components/forum/QuestionForm";
+import { MobileQuestionComposer } from "@/components/forum/MobileQuestionComposer";
 
 export const metadata: Metadata = {
   title: "Hỏi bếp | Bếp Nhà Mình",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export default function ForumPage() {
-  return <><Header active="forum" /><main className="pt-16 lg:pt-20"><section className="bg-bep-primary-light px-4 py-9 sm:px-6 lg:px-8 lg:py-14"><div className="mx-auto max-w-[1200px]"><nav aria-label="Đường dẫn" className="mb-5 text-sm text-bep-smoke"><Link href="/" className="text-bep-primary-dark hover:underline">Trang chủ</Link> / Hỏi bếp</nav><span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-bep-herb-ink"><CookingPot size={18} /> Góc bếp cộng đồng</span><h1 className="mt-4 text-[30px] font-bold leading-tight text-bep-ink lg:text-[40px]">Hỏi bếp — Chuyện to nhỏ quanh nồi cơm</h1><p className="mt-4 max-w-2xl text-base leading-7 text-bep-smoke">Từ sơ chế đến nêm nếm, cứ hỏi điều bạn đang băn khoăn. Những người bạn bếp sẽ cùng chia sẻ kinh nghiệm thật.</p></div></section>
-    <div className="mx-auto grid max-w-[1200px] gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,2fr)_minmax(300px,1fr)] lg:items-start lg:px-8"><div className="order-2 lg:order-1"><QuestionList /></div><aside className="order-1 space-y-5 lg:order-2 lg:sticky lg:top-24"><QuestionForm /><div className="hidden rounded-bep-lg bg-bep-herb-light p-5 lg:block"><h2 className="flex items-center gap-2 font-semibold text-bep-herb-ink"><MessageCircle size={19} /> Nói chuyện thật lòng</h2><p className="mt-2 text-sm leading-6 text-bep-smoke">Viết rõ cách bạn đã thử và giữ lời lẽ thân thiện để mọi người dễ giúp nhau.</p></div></aside></div>
+  return <><Header active="forum" /><main className="pt-16 lg:pt-20"><section className="bg-bep-primary-light px-4 py-9 sm:px-6 lg:px-8 lg:py-14"><div className="mx-auto max-w-[1200px]"><nav aria-label="Đường dẫn" className="mb-5 text-sm text-bep-smoke"><Link href="/" className="bep-link bep-crumb text-bep-primary-dark">Trang chủ</Link> / Hỏi bếp</nav><span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-bep-herb-ink"><CookingPot size={18} /> Góc bếp cộng đồng</span><h1 className="mt-4 text-[30px] font-bold leading-tight text-bep-ink lg:text-[40px]">Hỏi bếp — Chuyện to nhỏ quanh nồi cơm</h1><p className="mt-4 max-w-2xl text-base leading-7 text-bep-smoke">Từ sơ chế đến nêm nếm, cứ hỏi điều bạn đang băn khoăn. Những người bạn bếp sẽ cùng chia sẻ kinh nghiệm thật.</p></div></section>
+    <div className="mx-auto grid max-w-[1200px] gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,2fr)_minmax(300px,1fr)] lg:items-start lg:px-8"><div className="space-y-5"><QuestionList /><MobileQuestionComposer /></div><aside className="hidden space-y-5 lg:sticky lg:top-24 lg:block"><QuestionForm /><div className="rounded-bep-lg bg-bep-herb-light p-5"><h2 className="flex items-center gap-2 font-semibold text-bep-herb-ink"><MessageCircle size={19} /> Nói chuyện thật lòng</h2><p className="mt-2 text-sm leading-6 text-bep-smoke">Viết rõ cách bạn đã thử và giữ lời lẽ thân thiện để mọi người dễ giúp nhau.</p></div></aside></div>
   </main><Footer /><MobileNav active="forum" /></>;
 }
