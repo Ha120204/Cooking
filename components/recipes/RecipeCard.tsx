@@ -4,7 +4,7 @@ import { Clock3, CookingPot } from "lucide-react";
 import type { RecipeFrontmatter } from "@/lib/recipe-schema";
 import { difficultyLabel } from "@/lib/recipe-schema";
 import { FavoriteButton } from "./FavoriteButton";
-import { RatingStars } from "./RatingStars";
+import { RecipeStats } from "./RecipeStats";
 
 type RecipeCardProps = { recipe: RecipeFrontmatter; compact?: boolean };
 
@@ -36,7 +36,7 @@ export function RecipeCard({ recipe, compact = false }: RecipeCardProps) {
             <CookingPot size={14} /> {difficultyLabel[recipe.difficulty]}
           </span>
         </div>
-        <RatingStars />
+        <RecipeStats slug={recipe.slug} showLikes={compact} />
       </div>
     </article>
   );

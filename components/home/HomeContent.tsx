@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ChefHat, Clock3, CookingPot, Search, Shuffle, Sparkles, UtensilsCrossed } from "lucide-react";
 import type { RecipeFrontmatter } from "@/lib/recipe-schema";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
 import { useFeaturedMenu } from "@/components/weekly/useFeaturedMenu";
 import type { WeeklyMenuSummary } from "@/lib/weekly-selection";
+import type { RecipeStat } from "@/lib/supabase/types";
 
 type HomeContentProps = {
   recipes: RecipeFrontmatter[];
@@ -15,11 +16,23 @@ type HomeContentProps = {
 
 export function HomeContent({ recipes, menus }: HomeContentProps) {
   const [query, setQuery] = useState("");
+  const [stats, setStats] = useState<Record<string, RecipeStat>>({});
   const { menu, isCurrent, resolved } = useFeaturedMenu(menus);
   const shown = recipes.filter((recipe) =>
     [recipe.title, recipe.description, ...recipe.tags].some((value) => value.toLocaleLowerCase("vi").includes(query.toLocaleLowerCase("vi"))),
   );
   const menuRecipes = menu?.recipeSlugs.map((slug) => recipes.find((recipe) => recipe.slug === slug)).filter((recipe): recipe is RecipeFrontmatter => !!recipe) ?? [];
+  const popular = [...recipes].sort((a, b) => (stats[b.slug]?.like_count ?? 0) - (stats[a.slug]?.like_count ?? 0)).slice(0, 3);
+
+  useEffect(() => {
+    if (!recipes.length) return;
+    const controller = new AbortController();
+    fetch(`/api/recipes/stats?slugs=${recipes.map((recipe) => recipe.slug).join(",")}`, { cache: "no-store", signal: controller.signal })
+      .then((response) => response.ok ? response.json() as Promise<{ stats: RecipeStat[] }> : null)
+      .then((result) => { if (result && !controller.signal.aborted) setStats(Object.fromEntries(result.stats.map((stat) => [stat.recipe_slug, stat]))); })
+      .catch(() => {});
+    return () => controller.abort();
+  }, [recipes]);
 
   return (
     <>
@@ -61,7 +74,7 @@ export function HomeContent({ recipes, menus }: HomeContentProps) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16"><div className="mb-6"><p className="mb-1 text-sm font-semibold text-bep-primary-dark">MÓN NGON QUEN THUỘC</p><h2 className="text-2xl font-bold text-bep-ink lg:text-[32px]">Được yêu thích trong bếp nhà</h2><p className="mt-2 text-sm text-bep-smoke">Gợi ý từ bộ công thức hiện có; số lượt thích sẽ cập nhật khi góc cộng đồng mở.</p></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{recipes.slice(0, 3).map((recipe) => <RecipeCard key={recipe.slug} recipe={recipe} compact />)}</div></section>
+      <section className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16"><div className="mb-6"><p className="mb-1 text-sm font-semibold text-bep-primary-dark">MÓN NGON QUEN THUỘC</p><h2 className="text-2xl font-bold text-bep-ink lg:text-[32px]">Được yêu thích trong bếp nhà</h2><p className="mt-2 text-sm text-bep-smoke">Số lượt thích và đánh giá được cập nhật từ cộng đồng.</p></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{popular.map((recipe) => <RecipeCard key={recipe.slug} recipe={recipe} compact />)}</div></section>
 
       <section className="bg-bep-dim/70 px-4 py-12 sm:px-6 lg:px-8 lg:py-16"><div className="mx-auto max-w-[1200px]"><div className="mb-6"><p className="mb-1 text-sm font-semibold text-bep-primary-dark">{resolved ? (isCurrent ? "THỰC ĐƠN TUẦN NÀY" : "THỰC ĐƠN GẦN NHẤT") : "THỰC ĐƠN NỔI BẬT"}</p><h2 className="text-2xl font-bold text-bep-ink lg:text-[32px]">{menu?.title ?? "Thực đơn tuần"}</h2><p className="mt-2 text-sm text-bep-smoke">{menu?.summary ?? "Thực đơn mới sẽ sớm có mặt."}</p></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{menuRecipes.map((recipe, index) => <div key={recipe.slug} className="rounded-bep-md bg-bep-surface p-4 shadow-bep-card"><span className="text-xs font-semibold text-bep-herb">MÓN {index + 1}</span><h3 className="mt-2 text-lg font-semibold text-bep-ink">{recipe.title}</h3><p className="mt-2 flex items-center gap-1 text-sm text-bep-smoke"><Clock3 size={16} /> {recipe.cookTime} phút</p><Link href={"/cong-thuc/" + recipe.slug} className="mt-3 inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-bep-primary-dark">Xem món <ArrowRight size={16} /></Link></div>)}</div><Link href={menu ? "/thuc-don-tuan/" + menu.slug : "/thuc-don-tuan"} className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-bep-md bg-bep-primary px-5 font-semibold text-white">Xem thực đơn tuần <ArrowRight size={18} /></Link></div></section>
     </>

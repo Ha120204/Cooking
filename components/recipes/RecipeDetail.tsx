@@ -1,14 +1,17 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Clock3, CookingPot, Heart, Lightbulb, MessageCircle, Share2, ThumbsUp, Users } from "lucide-react";
+import { ArrowLeft, Clock3, CookingPot, Heart, Lightbulb, MessageCircle, Share2, Users } from "lucide-react";
 import type { Recipe, RecipeFrontmatter } from "@/lib/recipe-schema";
 import { categoryLabel, difficultyLabel } from "@/lib/recipe-schema";
 import { Header } from "@/components/layout/Header";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { Footer } from "@/components/layout/Footer";
 import { FavoriteButton } from "./FavoriteButton";
-import { RatingStars } from "./RatingStars";
+import { RecipeStats } from "./RecipeStats";
+import { LikeButton } from "./LikeButton";
+import { RatingInput } from "./RatingInput";
+import { CommentSection } from "@/components/community/CommentSection";
 import { RecipeCard } from "./RecipeCard";
 
 type RecipeDetailProps = { recipe: Recipe; body: ReactNode; related: RecipeFrontmatter[] };
@@ -40,10 +43,10 @@ export function RecipeDetail({ recipe, body, related }: RecipeDetailProps) {
               <div className="rounded-bep-md bg-bep-dim p-3"><Clock3 size={19} className="text-bep-primary-dark" /><p className="mt-1 text-xs text-bep-smoke">Thời gian</p><p className="text-sm font-semibold">{recipe.cookTime} phút</p></div>
               <div className="rounded-bep-md bg-bep-dim p-3"><Users size={19} className="text-bep-primary-dark" /><p className="mt-1 text-xs text-bep-smoke">Khẩu phần</p><p className="text-sm font-semibold">{recipe.servings} người</p></div>
               <div className="rounded-bep-md bg-bep-dim p-3"><CookingPot size={19} className="text-bep-herb" /><p className="mt-1 text-xs text-bep-smoke">Độ khó</p><p className="text-sm font-semibold">{difficultyLabel[recipe.difficulty]}</p></div>
-              <div className="rounded-bep-md bg-bep-dim p-3"><Heart size={19} className="text-bep-primary-dark" /><p className="mt-1 text-xs text-bep-smoke">Đánh giá</p><RatingStars /></div>
+              <div className="rounded-bep-md bg-bep-dim p-3"><Heart size={19} className="text-bep-primary-dark" /><p className="mt-1 text-xs text-bep-smoke">Đánh giá</p><RecipeStats slug={recipe.slug} /></div>
             </div>
-            <div className="mt-5 flex flex-wrap gap-2"><FavoriteButton slug={recipe.slug} title={recipe.title} /><button type="button" disabled title="Lượt thích sẽ mở ở M2" className="inline-flex min-h-11 cursor-not-allowed items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-smoke opacity-75"><ThumbsUp size={18} /> Thích · sắp mở</button><button type="button" disabled title="Chia sẻ sẽ mở sau" className="inline-flex min-h-11 cursor-not-allowed items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-smoke opacity-75"><Share2 size={18} /> Chia sẻ</button></div>
-            <div className="mt-4"><RatingStars input /></div>
+            <div className="mt-5 flex flex-wrap gap-2"><FavoriteButton slug={recipe.slug} title={recipe.title} /><LikeButton slug={recipe.slug} /><button type="button" disabled title="Chia sẻ sẽ mở sau" className="inline-flex min-h-11 cursor-not-allowed items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-smoke opacity-75"><Share2 size={18} /> Chia sẻ</button></div>
+            <div className="mt-4"><RatingInput slug={recipe.slug} /></div>
             <div className="mt-4 flex flex-wrap gap-1.5">{recipe.tags.map((tag) => <span key={tag} className="rounded-bep-sm bg-bep-primary-light px-2.5 py-1 text-xs font-medium text-bep-primary-dark">#{tag.replaceAll(" ", "")}</span>)}</div>
           </div>
         </section>
@@ -51,7 +54,7 @@ export function RecipeDetail({ recipe, body, related }: RecipeDetailProps) {
         <div className="mt-10 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)] lg:items-start lg:gap-8">
           <div className="lg:hidden"><Ingredients recipe={recipe} /></div>
           <div className="mt-8 lg:mt-0"><section className="rounded-bep-lg bg-bep-surface p-5 shadow-bep-card sm:p-7"><div className="recipe-prose">{body}</div></section>
-            <section className="mt-8 rounded-bep-lg bg-bep-surface p-5 shadow-bep-card sm:p-7"><h2 className="flex items-center gap-2 text-xl font-semibold"><MessageCircle size={22} className="text-bep-primary-dark" /> Bình luận &amp; chia sẻ</h2><p className="mt-3 rounded-bep-md bg-bep-dim p-4 text-sm text-bep-smoke">Chưa có bình luận. Góc trò chuyện sẽ mở trong giai đoạn M2.</p><div className="mt-5 space-y-3"><h3 className="font-semibold">Chia sẻ cảm nhận của bạn</h3><input disabled aria-label="Tên hiển thị" placeholder="Tên hiển thị" className="min-h-11 w-full rounded-bep-md border border-bep-border bg-bep-dim px-4 opacity-70" /><textarea disabled aria-label="Nội dung bình luận" placeholder="Bạn đã nấu món này thế nào?" rows={4} className="w-full rounded-bep-md border border-bep-border bg-bep-dim p-4 opacity-70" /><button disabled type="button" className="min-h-11 cursor-not-allowed rounded-bep-md bg-bep-primary px-5 font-semibold text-white opacity-65">Gửi bình luận · sắp mở</button></div></section>
+            <section className="mt-8 rounded-bep-lg bg-bep-surface p-5 shadow-bep-card sm:p-7"><h2 className="flex items-center gap-2 text-xl font-semibold"><MessageCircle size={22} className="text-bep-primary-dark" /> Bình luận &amp; chia sẻ</h2><CommentSection targetType="recipe" slug={recipe.slug} /></section>
           </div>
           <div className="hidden lg:block"><Ingredients recipe={recipe} /></div>
         </div>

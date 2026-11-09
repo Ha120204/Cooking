@@ -4,12 +4,14 @@ Website cộng đồng nấu ăn cá nhân, phi thương mại. M1b đã thay tr
 
 M1c bổ sung `/cong-thuc` (tìm kiếm, lọc theo URL, món đã lưu) và `/hom-nay-an-gi` (bốc món từ MDX), cùng `sitemap.xml` và `robots.txt`.
 
-Phần mở rộng M1c có `/thuc-don-tuan`, `/thuc-don-tuan/[slug]` từ MDX và `/chinh-sach-rieng-tu`. Trang thực đơn chọn tuần theo ngày tại Việt Nam; nếu không có tuần hiện tại, chọn tuần gần nhất. Bình luận thực đơn đang là UI tĩnh, chờ M2. Tính năng Thử thách tuần đã được bỏ khỏi dự án.
+Phần mở rộng M1c có `/thuc-don-tuan`, `/thuc-don-tuan/[slug]` từ MDX và `/chinh-sach-rieng-tu`. Trang thực đơn chọn tuần theo ngày tại Việt Nam; nếu không có tuần hiện tại, chọn tuần gần nhất. Tính năng Thử thách tuần đã được bỏ khỏi dự án.
+
+M2a đã được viết ở repo nhưng cần chạy migration và kiểm tra trên Supabase trước khi deploy. M2b (Góp công thức và Hỏi bếp) chưa mở.
 
 ## Chạy local
 
 1. `npm install`
-2. Sao chép `.env.example` thành `.env.local`, thay bằng Measurement ID GA4 thật và tên miền thật.
+2. Sao chép `.env.example` thành `.env.local`, điền GA4, tên miền và các biến Supabase. Key quyền cao chỉ dùng phía server.
 3. `npm run dev`
 
 Google Analytics chỉ được tải khi deploy Vercel Production và `NEXT_PUBLIC_GA_MEASUREMENT_ID` có dạng `G-...`. Dùng `npm run build` và `npm run typecheck` để kiểm tra.
@@ -20,7 +22,7 @@ Google Analytics chỉ được tải khi deploy Vercel Production và `NEXT_PUB
 - Công thức ở `content/recipes/*.mdx`, được đọc bằng `gray-matter`, kiểm tra frontmatter bằng `zod`, và render nội dung với `next-mdx-remote/rsc`.
 - Trang chi tiết được dựng tĩnh qua `generateStaticParams`; slug không có trả 404. Mỗi món có title, description và ảnh Open Graph riêng.
 - Ảnh PNG hiện là minh họa placeholder do dự án tạo; cần thay bằng ảnh món thật có quyền sử dụng trước khi nghiệm thu nội dung.
-- Lưu yêu thích hoạt động bằng localStorage. Chấm sao, lượt thích và bình luận là giao diện chờ M2, chưa kết nối Supabase và chưa hiển thị số liệu giả.
+- Lưu yêu thích hoạt động bằng localStorage. M2a kết nối chấm sao, lượt thích và bình luận với Supabase sau khi migration được chạy.
 - `view_recipe` được gửi một lần cho mỗi lượt mở trang chi tiết trên Production, kèm `recipe_slug`.
 
 ## M1c
@@ -50,13 +52,23 @@ Các trang chưa có export Stitch riêng sẽ được dựng sau khi nhận th
 - Kiểm tra nội dung mới và ẩn spam trong Supabase Table Editor.
 - Theo dõi job dọn `rate_limit_buckets` và lịch sử chạy.
 - Nếu dùng Supabase Free, theo dõi trạng thái project vì project ít hoạt động có thể bị tạm dừng; kiểm tra kết nối trước đợt nghiệm thu.
+- Theo dõi Vercel Cron `/api/health` hằng ngày. Một truy vấn/ngày giúp tạo hoạt động nhưng không bảo đảm Supabase Free sẽ không bị tạm dừng.
+
+## Chạy migration và kiểm tra M2a
+
+1. Trong Supabase Dashboard, mở **SQL Editor → New query**. Dán toàn bộ `supabase/migrations/20261109_m2a.sql`, bấm **Run** một lần. File tạo các bảng, RLS, view `recipe_stats`, RPC và job dọn bucket bằng `pg_cron`. Nếu project chưa bật Supabase Cron, bật tại **Integrations → Cron** rồi chạy lại phần `cron.schedule` cuối file. Không chạy test trước migration.
+2. Tạo query mới, dán toàn bộ `supabase/tests/m2a_rls.sql` rồi bấm **Run**. Dòng cuối cần trả `M2a RLS checks passed; probe data rolled back`. Test kiểm tra dữ liệu ẩn, quyền ghi của `anon`, quyền RPC và thống kê 1 lượt thích/2 đánh giá với trung bình 4 sao. Mọi bản ghi thử được `ROLLBACK`.
+3. Trong Table Editor, xác nhận các bảng đã có. Trong SQL Editor có thể xem job bằng `select jobname, schedule, command from cron.job where jobname = 'cleanup-rate-limit-buckets';`.
+4. Sau khi migration và test thành công, deploy M2a. Vercel cần `SUPABASE_URL`, `SUPABASE_ANON_KEY` hoặc `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SERVICE_ROLE_KEY` hoặc `SUPABASE_SECRET_KEY`, `IP_HASH_SECRET` dài tối thiểu 32 ký tự và `CRON_SECRET`. `vercel.json` đặt Functions tại `hnd1`, cron `/api/health` mỗi ngày lúc 02:00 UTC.
+
+Mọi lượt ghi đi qua Route Handler có Zod, honeypot và rate limit theo IP băm. `anon` chỉ đọc bình luận/câu hỏi/trả lời chưa ẩn; view `recipe_stats` chỉ đọc qua key server và chỉ xuất số liệu tổng hợp. GET tương tác trả `no-store`, còn nội dung MDX tiếp tục build tĩnh. Dev hậu kiểm bằng `hidden` trong Supabase Table Editor.
 
 ## Quyết định đã chốt cho M2
 
 - Bình luận, câu hỏi và câu trả lời hiển thị ngay; dev hậu kiểm bằng cột `hidden`. Chỉ công thức người dùng gửi có `status = pending`.
 - Khi triển khai Supabase ở M2, `comments.target_type` chỉ nhận `recipe` và `weekly_menu`.
 - Lượt thích là thao tác bật/tắt: server thêm hoặc xóa theo `(recipe_slug, visitor_hash)`; chấm sao được đổi bằng upsert theo cùng khóa. Các thao tác cập nhật/xóa chỉ dùng key có quyền cao trên server.
-- Đọc `recipe_stats`, bình luận và hỏi đáp bằng yêu cầu không cache; nội dung MDX vẫn build từ file.
+- Đọc `recipe_stats`, bình luận và hỏi đáp bằng yêu cầu không cache; nội dung MDX vẫn build từ file. `anon` không được ghi trực tiếp để không bỏ qua kiểm tra ở Route Handler.
 - Rate limit dùng RPC SQL tăng bộ đếm nguyên tử: `INSERT ... ON CONFLICT DO UPDATE SET hits = hits + 1 RETURNING hits`. Chỉ `service_role` được `EXECUTE`. Dọn bucket cũ bằng Supabase Cron, hoặc Vercel Cron nếu không dùng được Supabase Cron.
 - Khi kết nối Supabase, hỗ trợ cặp key legacy `anon`/`service_role` hoặc cặp mới `publishable`/`secret` tùy project. Key có quyền cao và key dùng ở server không được đưa vào `NEXT_PUBLIC_*` hoặc client bundle.
-- Trang `/chinh-sach-rieng-tu` cần bản export Stitch trước khi dựng giao diện. Email liên hệ hiện tại do chủ website cung cấp; có thể thay đổi sau.
+- Trang `/chinh-sach-rieng-tu` đã có bản Stitch và được cập nhật cho M2a. Email liên hệ hiện tại do chủ website cung cấp; có thể thay đổi sau.
