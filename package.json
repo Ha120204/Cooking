@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "images:check": "node scripts/check-recipe-images.mjs",
+    "images:optimize": "node scripts/optimize-recipe-images.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.5",
@@ -25,6 +27,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "tailwindcss": "4.3.3",
+    "sharp": "^0.35.5",
     "typescript": "5.9.3"
   }
 }

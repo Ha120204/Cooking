@@ -1,4 +1,4 @@
-import { readFile, readdir } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
@@ -22,7 +22,14 @@ export async function getRecipeBySlug(slug: string): Promise<Recipe | null> {
   if (metadata.slug !== slug) {
     throw new Error("Tên file và slug frontmatter không khớp: " + slug);
   }
-  return { ...metadata, body: parsed.content };
+  let cover = metadata.cover;
+  try {
+    await access(path.join(process.cwd(), "public", cover.slice(1)));
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+    cover = `/anh-minh-hoa/${slug}`;
+  }
+  return { ...metadata, cover, body: parsed.content };
 }
 
 export async function getAllRecipes(): Promise<Recipe[]> {

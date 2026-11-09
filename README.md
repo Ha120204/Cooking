@@ -12,6 +12,14 @@ M2b đã được kiểm tra bằng lượt gửi câu hỏi, trả lời và c�
 
 M3 bổ sung trang 404/trang lỗi, icon và manifest để thêm website vào màn hình chính, cùng ảnh Open Graph mặc định cho Trang chủ, Hỏi bếp và Thực đơn tuần. Ảnh OG được tạo từ `app/**/opengraph-image.tsx` bằng `ImageResponse`; font Be Vietnam Pro Bold và giấy phép OFL nằm trong `assets/fonts/`. Icon nồi dùng nét từ Lucide CookingPot; chạy `node scripts/generate-icons.mjs` để tạo lại các cỡ PNG và favicon. Báo cáo Lighthouse mobile nằm trong `reports/lighthouse/` và không được commit.
 
+## Thêm ảnh cho món
+
+1. Chuẩn bị ảnh bạn có quyền sử dụng; lưu nguồn và thông tin ghi công để bổ sung vào bài MDX khi cần. Đặt ảnh vào `public/images/recipes/` với tên trùng `slug`, ví dụ `canh-bi-do-thit-bam.jpg`. Có thể đặt ảnh nguồn dạng PNG, WebP, AVIF hoặc SVG cùng tên trước khi tối ưu.
+2. Trong frontmatter, `cover` luôn là `/images/recipes/<slug>.jpg`. Nếu JPG chưa có, website tự hiển thị ảnh minh họa mang tên món theo màu của `DESIGN.md`; đường dẫn trong frontmatter không cần đổi.
+3. Chạy `npm run images:check` để xem món nào còn thiếu JPG. Lệnh này chỉ liệt kê, không sửa file và không làm build thất bại.
+4. Chạy `npm run images:optimize` để cắt giữa ảnh nguồn thành 1200×900 (tỉ lệ 4:3), xuất JPEG chất lượng bắt đầu khoảng 80 và giảm dần nếu cần để dưới 300 KB. Script giữ tên slug, thay ảnh nguồn trong thư mục này bằng `.jpg`. Nếu muốn giữ tệp gốc để chỉnh sửa, hãy sao lưu ngoài `public/images/recipes/` trước khi chạy. Bốn tệp SVG minh họa ban đầu được lưu ở `assets/recipe-illustrations/`. Hãy kiểm tra lại ảnh sau khi cắt, nhất là món đặt lệch tâm.
+5. Chạy lại `npm run images:check`, `npm run typecheck` và `npm run build` trước khi xuất bản. Khi dùng ảnh từ người đóng góp, chỉ thay placeholder sau khi đã xác minh quyền sử dụng và ghi công phù hợp.
+
 ## Chạy local
 
 1. `npm install`
@@ -25,7 +33,7 @@ Google Analytics chỉ được tải khi deploy Vercel Production và `NEXT_PUB
 - Thiết kế gốc nằm ở `design/stitch/trang-chu/` và `design/stitch/chi-tiet-cong-thuc/`. Token được định nghĩa trong `app/globals.css` theo `design/DESIGN.md`.
 - Công thức ở `content/recipes/*.mdx`, được đọc bằng `gray-matter`, kiểm tra frontmatter bằng `zod`, và render nội dung với `next-mdx-remote/rsc`.
 - Trang chi tiết được dựng tĩnh qua `generateStaticParams`; slug không có trả 404. Mỗi món có title, description và ảnh Open Graph riêng.
-- Ảnh PNG hiện là minh họa placeholder do dự án tạo; cần thay bằng ảnh món thật có quyền sử dụng trước khi nghiệm thu nội dung.
+- Hai mươi công thức hiện có ảnh JPG. Nếu một công thức mới chưa có ảnh, website dùng ảnh minh họa tự sinh có tên món cho đến khi bổ sung ảnh có quyền sử dụng.
 - Lưu yêu thích hoạt động bằng localStorage. M2a kết nối chấm sao, lượt thích và bình luận với Supabase sau khi migration được chạy.
 - `view_recipe` được gửi một lần cho mỗi lượt mở trang chi tiết trên Production, kèm `recipe_slug`.
 

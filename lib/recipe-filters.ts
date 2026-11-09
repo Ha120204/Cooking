@@ -1,7 +1,7 @@
 import type { RecipeFrontmatter } from "./recipe-schema";
 import { normalizeSearch } from "./normalize";
 
-export const categories = ["mon-canh", "mon-chinh", "mon-chay", "mon-cuon"] as const;
+export const categories = ["mon-canh", "mon-chinh", "mon-chay", "mon-cuon", "mon-khai-vi", "mon-an-sang"] as const;
 export const difficulties = ["de", "trung-binh", "kho"] as const;
 export const timeOptions = ["15", "30", "60", "over-60"] as const;
 export const sortOptions = ["moi-nhat", "nhanh-nhat", "ten-mon"] as const;

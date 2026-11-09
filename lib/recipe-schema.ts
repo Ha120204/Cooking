@@ -7,7 +7,7 @@ export const recipeFrontmatterSchema = z.object({
   slug: slugSchema,
   description: z.string().min(20).max(500),
   cover: z.string().startsWith("/images/recipes/"),
-  category: z.enum(["mon-chinh", "mon-canh", "mon-chay", "mon-cuon"]),
+  category: z.enum(["mon-chinh", "mon-canh", "mon-chay", "mon-cuon", "mon-khai-vi", "mon-an-sang"]),
   difficulty: z.enum(["de", "trung-binh", "kho"]),
   cookTime: z.number().int().positive(),
   servings: z.number().int().positive(),
@@ -17,7 +17,7 @@ export const recipeFrontmatterSchema = z.object({
     unit: z.string(),
   })).min(1),
   tags: z.array(z.string().min(1)),
-  publishedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  publishedAt: z.union([z.iso.date(), z.iso.datetime({ offset: true })]),
 });
 
 export type RecipeFrontmatter = z.infer<typeof recipeFrontmatterSchema>;
@@ -34,4 +34,6 @@ export const categoryLabel: Record<RecipeFrontmatter["category"], string> = {
   "mon-canh": "Món canh",
   "mon-chay": "Món chay",
   "mon-cuon": "Món cuốn",
+  "mon-khai-vi": "Khai vị / ăn vặt",
+  "mon-an-sang": "Ăn sáng",
 };

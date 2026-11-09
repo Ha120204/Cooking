@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...recipes.map((recipe) => ({
       url: `${siteUrl}/cong-thuc/${recipe.slug}`,
-      lastModified: new Date(`${recipe.publishedAt}T00:00:00+07:00`),
+      lastModified: new Date(recipe.publishedAt.length === 10 ? `${recipe.publishedAt}T00:00:00+07:00` : recipe.publishedAt),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
