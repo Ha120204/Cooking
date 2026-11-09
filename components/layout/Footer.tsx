@@ -19,6 +19,8 @@ export function Footer() {
           <Link href="/cong-thuc" className="min-h-11 content-center text-bep-primary-dark hover:underline">Khám phá công thức</Link>
           <Link href="/thuc-don-tuan" className="min-h-11 content-center text-bep-primary-dark hover:underline">Thực đơn tuần</Link>
           <Link href="/hom-nay-an-gi" className="min-h-11 content-center text-bep-primary-dark hover:underline">Hôm nay ăn gì?</Link>
+          <Link href="/hoi-bep" className="min-h-11 content-center text-bep-primary-dark hover:underline">Hỏi bếp</Link>
+          <Link href="/gui-cong-thuc" className="min-h-11 content-center text-bep-primary-dark hover:underline">Góp công thức</Link>
           <a className="min-h-11 content-center text-bep-primary-dark hover:underline" href="mailto:thanhthanhnguyenthi467@gmail.com">
             thanhthanhnguyenthi467@gmail.com
           </a>

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ChefHat, CookingPot, Search, Sparkles } from "lucide-react";
+import { CookingPot, Plus, Sparkles } from "lucide-react";
 
-type HeaderProps = { active?: "home" | "recipe" | "random" | "weekly" | "privacy" };
+type HeaderProps = { active?: "home" | "recipe" | "random" | "weekly" | "privacy" | "forum" | "submit" };
 
 export function Header({ active = "home" }: HeaderProps) {
   return (
@@ -20,20 +20,20 @@ export function Header({ active = "home" }: HeaderProps) {
         <nav aria-label="Điều hướng chính" className="hidden items-center gap-6 xl:flex">
           <Link href="/cong-thuc" aria-current={active === "recipe" ? "page" : undefined} className={"min-h-11 content-center text-sm font-semibold hover:text-bep-primary-dark " + (active === "recipe" ? "text-bep-primary-dark" : "text-bep-smoke")}>Công thức</Link>
           <Link href="/thuc-don-tuan" aria-current={active === "weekly" ? "page" : undefined} className={"min-h-11 content-center text-sm font-semibold hover:text-bep-primary-dark " + (active === "weekly" ? "text-bep-primary-dark" : "text-bep-smoke")}>Thực đơn tuần</Link>
-          <span aria-disabled="true" title="Sắp mở ở M2" className="cursor-not-allowed py-2 text-sm font-semibold text-bep-smoke/75">Hỏi bếp</span>
+          <Link href="/hoi-bep" aria-current={active === "forum" ? "page" : undefined} className={"min-h-11 content-center text-sm font-semibold hover:text-bep-primary-dark " + (active === "forum" ? "text-bep-primary-dark" : "text-bep-smoke")}>Hỏi bếp</Link>
         </nav>
 
         <div className="hidden items-center gap-3 sm:flex">
           <Link href="/hom-nay-an-gi" aria-current={active === "random" ? "page" : undefined} className="inline-flex min-h-11 items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-primary-dark hover:bg-bep-primary-light">
             <Sparkles size={17} /> Hôm nay ăn gì?
           </Link>
-          <span aria-disabled="true" className="inline-flex min-h-11 cursor-not-allowed items-center rounded-bep-md bg-bep-primary px-5 text-sm font-semibold text-white opacity-75">
+          <Link href="/gui-cong-thuc" aria-current={active === "submit" ? "page" : undefined} className="inline-flex min-h-11 items-center rounded-bep-md bg-bep-primary px-5 text-sm font-semibold text-white hover:bg-bep-primary-dark">
             + Góp công thức
-          </span>
+          </Link>
         </div>
-        <span className="flex size-11 items-center justify-center rounded-full text-bep-primary-dark sm:hidden" aria-hidden="true">
-          {active === "home" ? <ChefHat size={24} /> : <Search size={22} />}
-        </span>
+        <Link href="/gui-cong-thuc" aria-label="Góp công thức" className="flex size-11 items-center justify-center rounded-full bg-bep-primary-light text-bep-primary-dark sm:hidden">
+          <Plus size={24} aria-hidden="true" />
+        </Link>
       </div>
     </header>
   );

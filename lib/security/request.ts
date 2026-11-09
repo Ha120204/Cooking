@@ -13,12 +13,12 @@ export function sameOrigin(request: NextRequest) {
   return !origin || origin === request.nextUrl.origin;
 }
 
-export async function jsonBody(request: NextRequest) {
+export async function jsonBody(request: NextRequest, maxLength = 10_000) {
   if (!request.headers.get("content-type")?.startsWith("application/json")) return null;
-  if (Number(request.headers.get("content-length") ?? 0) > 10_000) return null;
+  if (Number(request.headers.get("content-length") ?? 0) > maxLength) return null;
   try {
     const raw = await request.text();
-    if (raw.length > 10_000) return null;
+    if (raw.length > maxLength) return null;
     return JSON.parse(raw) as unknown;
   } catch {
     return null;

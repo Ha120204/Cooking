@@ -6,7 +6,9 @@ M1c bổ sung `/cong-thuc` (tìm kiếm, lọc theo URL, món đã lưu) và `/h
 
 Phần mở rộng M1c có `/thuc-don-tuan`, `/thuc-don-tuan/[slug]` từ MDX và `/chinh-sach-rieng-tu`. Trang thực đơn chọn tuần theo ngày tại Việt Nam; nếu không có tuần hiện tại, chọn tuần gần nhất. Tính năng Thử thách tuần đã được bỏ khỏi dự án.
 
-M2a đã được kiểm tra RLS trên Supabase và deploy Production tại `https://thanhtuyennt1405.id.vn`. Bình luận, thích và chấm sao đang hoạt động; M2b (Góp công thức và Hỏi bếp) chưa mở.
+M2a và M2b đã được kiểm tra RLS trên Supabase và deploy Production tại `https://thanhtuyennt1405.id.vn`. Bình luận, thích, chấm sao, Góp công thức và Hỏi bếp đang hoạt động.
+
+M2b đã được kiểm tra bằng lượt gửi câu hỏi, trả lời và công thức trên Production; dữ liệu thử đã được xóa sau khi xác nhận.
 
 ## Chạy local
 
@@ -31,7 +33,7 @@ Google Analytics chỉ được tải khi deploy Vercel Production và `NEXT_PUB
 - `/cong-thuc` lọc toàn bộ ở client theo `q`, `loai`, `do-kho`, `thoi-gian`, `yeu-thich=1` và `sap-xep`. Tìm kiếm cập nhật URL sau khoảng 300 ms bằng `replace`; bộ lọc dùng `push`.
 - Yêu thích dùng localStorage và đồng bộ cùng lúc giữa nút tim và bộ lọc, kể cả khi đổi tab trình duyệt. Không cần đăng nhập.
 - `/hom-nay-an-gi` chọn món ngẫu nhiên từ công thức hiện có sau khi lọc theo loại món, thời gian và khẩu phần. Nút bốc món gửi GA4 `random_dish` kèm `recipe_slug` trên Production.
-- Sitemap chỉ chứa các trang đã dựng; tên miền lấy từ `SITE_URL`. Giao diện Góp công thức và Hỏi bếp vẫn chờ M2.
+- Sitemap chỉ chứa các trang đã dựng; tên miền lấy từ `SITE_URL`. Giao diện Góp công thức và Hỏi bếp được triển khai trong M2b.
 
 ## Deploy M1a
 
@@ -62,6 +64,20 @@ Các trang chưa có export Stitch riêng sẽ được dựng sau khi nhận th
 4. Sau khi migration và test thành công, deploy M2a. Vercel cần `SUPABASE_URL`, `SUPABASE_ANON_KEY` hoặc `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SERVICE_ROLE_KEY` hoặc `SUPABASE_SECRET_KEY`, `IP_HASH_SECRET` dài tối thiểu 32 ký tự và `CRON_SECRET`. `vercel.json` đặt Functions tại `hnd1`, cron `/api/health` mỗi ngày lúc 02:00 UTC.
 
 Mọi lượt ghi đi qua Route Handler có Zod, honeypot và rate limit theo IP băm. `anon` chỉ đọc bình luận/câu hỏi/trả lời chưa ẩn; view `recipe_stats` chỉ đọc qua key server và chỉ xuất số liệu tổng hợp. GET tương tác trả `no-store`, còn nội dung MDX tiếp tục build tĩnh. Dev hậu kiểm bằng `hidden` trong Supabase Table Editor.
+
+## Chạy migration và kiểm tra M2b
+
+1. Trong Supabase SQL Editor, chạy toàn bộ `supabase/migrations/20261109_m2b.sql`. Migration thêm `image_url`, `image_credit`, `rights_confirmed_at` cho công thức gửi, `category` cho câu hỏi và RPC rate limit 10 phút cho câu trả lời. Không chạy lại file M2a.
+2. Trong query mới, chạy toàn bộ `supabase/tests/m2b_rls.sql`. Dòng cuối phải là `M2b RLS checks passed; probe data rolled back`. Các bản ghi và lượt đếm thử được hoàn tác.
+3. Deploy M2b sau khi hai bước trên thành công. GET hỏi đáp trả `no-store`; câu hỏi và trả lời hiện ngay, chỉ bản ghi có `hidden = false` được đọc bằng key công khai. Gửi công thức là dữ liệu chờ duyệt, không có API đọc công khai.
+
+### Duyệt công thức gửi trong Table Editor
+
+1. Mở **Table Editor → public.recipe_submissions**, lọc `status = pending`. Đọc tên món, mô tả, mảng `ingredients`, các `steps`, `image_url`, `image_credit` và `rights_confirmed_at`.
+2. Kiểm tra tính khả thi của công thức, quyền sử dụng ảnh và nội dung. Nếu không phù hợp, đổi `status` thành `rejected`. Không công bố trực tiếp bản ghi từ bảng này.
+3. Nếu duyệt, tạo `content/recipes/<slug>.mdx`. Điền frontmatter bắt buộc theo `lib/recipe-schema.ts`: `title`, `slug`, `description`, `cover`, `category`, `difficulty`, `cookTime`, `servings`, `ingredients[]`, `tags[]`, `publishedAt`. Chuyển phần `steps` thành nội dung hướng dẫn MDX. Những trường không có trên form như thời gian nấu, khẩu phần và độ khó do người biên tập bổ sung sau khi kiểm tra.
+4. Với ảnh có quyền sử dụng, lưu bản ảnh được phép vào `public/images/recipes/` rồi tham chiếu đường dẫn nội bộ ở `cover`; ghi công nguồn trong nội dung MDX. Nếu không xác minh được quyền ảnh, dùng ảnh có quyền sử dụng khác hoặc ảnh placeholder phù hợp.
+5. Chạy `npm run typecheck` và `npm run build`, deploy bài MDX, xác nhận trang công thức hoạt động, rồi đổi bản ghi thành `approved` trong Table Editor. Hậu kiểm câu hỏi/trả lời bằng cách đặt `hidden = true` khi cần.
 
 ## Quyết định đã chốt cho M2
 
