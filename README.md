@@ -6,7 +6,7 @@ M1c bổ sung `/cong-thuc` (tìm kiếm, lọc theo URL, món đã lưu) và `/h
 
 Phần mở rộng M1c có `/thuc-don-tuan`, `/thuc-don-tuan/[slug]` từ MDX và `/chinh-sach-rieng-tu`. Trang thực đơn chọn tuần theo ngày tại Việt Nam; nếu không có tuần hiện tại, chọn tuần gần nhất. Tính năng Thử thách tuần đã được bỏ khỏi dự án.
 
-M2a đã được viết ở repo nhưng cần chạy migration và kiểm tra trên Supabase trước khi deploy. M2b (Góp công thức và Hỏi bếp) chưa mở.
+M2a đã được kiểm tra RLS trên Supabase và deploy Production tại `https://thanhtuyennt1405.id.vn`. Bình luận, thích và chấm sao đang hoạt động; M2b (Góp công thức và Hỏi bếp) chưa mở.
 
 ## Chạy local
 
