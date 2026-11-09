@@ -6,9 +6,9 @@ import { difficultyLabel } from "@/lib/recipe-schema";
 import { FavoriteButton } from "./FavoriteButton";
 import { RecipeStats } from "./RecipeStats";
 
-type RecipeCardProps = { recipe: RecipeFrontmatter; compact?: boolean };
+type RecipeCardProps = { recipe: RecipeFrontmatter; compact?: boolean; eagerImage?: boolean };
 
-export function RecipeCard({ recipe, compact = false }: RecipeCardProps) {
+export function RecipeCard({ recipe, compact = false, eagerImage = false }: RecipeCardProps) {
   return (
     <article className={"group overflow-hidden rounded-bep-md bg-bep-surface shadow-bep-card transition hover:shadow-bep-hover " + (compact ? "flex items-center" : "flex flex-col")}>
       <div className={"relative shrink-0 overflow-hidden bg-bep-dim " + (compact ? "h-28 w-28 sm:h-32 sm:w-36" : "aspect-[4/3] w-full")}>
@@ -17,6 +17,8 @@ export function RecipeCard({ recipe, compact = false }: RecipeCardProps) {
             src={recipe.cover}
             alt={"Ảnh minh họa " + recipe.title}
             fill
+            loading={eagerImage ? "eager" : "lazy"}
+            fetchPriority={eagerImage ? "high" : undefined}
             sizes={compact ? "144px" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"}
             className="object-cover transition duration-500 group-hover:scale-105"
           />
@@ -32,7 +34,7 @@ export function RecipeCard({ recipe, compact = false }: RecipeCardProps) {
           <span className="inline-flex items-center gap-1 rounded-bep-sm bg-bep-dim px-2.5 py-1 text-xs font-medium text-bep-smoke">
             <Clock3 size={14} /> {recipe.cookTime} phút
           </span>
-          <span className="inline-flex items-center gap-1 rounded-bep-sm bg-bep-herb-light px-2.5 py-1 text-xs font-medium text-bep-herb">
+          <span className="inline-flex items-center gap-1 rounded-bep-sm bg-bep-herb-light px-2.5 py-1 text-xs font-medium text-bep-herb-ink">
             <CookingPot size={14} /> {difficultyLabel[recipe.difficulty]}
           </span>
         </div>

@@ -70,7 +70,7 @@ export function RecipeSubmissionForm() {
   const inputClass = "mt-1 block min-h-12 w-full rounded-bep-md border border-bep-border bg-bep-canvas px-4 text-bep-ink";
   return <form onSubmit={submit} className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(260px,1fr)] lg:items-start">
     <div className="space-y-6">
-      {success && <div role="status" className="flex items-center gap-2 rounded-bep-md bg-bep-herb-light p-4 font-semibold text-bep-herb"><CheckCircle2 size={20} /> Công thức đã được gửi và đang chờ duyệt</div>}
+      {success && <div role="status" className="flex items-center gap-2 rounded-bep-md bg-bep-herb-light p-4 font-semibold text-bep-herb-ink"><CheckCircle2 size={20} /> Công thức đã được gửi và đang chờ duyệt</div>}
       <section className={sectionClass}><h2 className="mb-5 border-l-4 border-bep-primary pl-3 text-xl font-semibold">1. Thông tin món ăn</h2><div className="grid gap-5">
         <label className="text-sm font-semibold text-bep-primary-dark">Tên hiển thị người nấu *<input required minLength={2} maxLength={60} value={name} onChange={(event) => setName(event.target.value)} placeholder="VD: Cô Ba Sài Gòn" className={inputClass} /></label>
         <label className="text-sm font-semibold text-bep-primary-dark">Tên công thức *<input required minLength={3} maxLength={150} value={title} onChange={(event) => setTitle(event.target.value)} placeholder="VD: Canh chua cá" className={inputClass} /></label>

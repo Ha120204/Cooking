@@ -17,7 +17,7 @@ export function FavoriteButton({ slug, title, compact = false }: FavoriteButtonP
       type="button"
       onClick={() => toggleFavorite(slug)}
       aria-pressed={saved}
-      aria-label={(saved ? "Bỏ lưu " : "Lưu ") + title + " vào yêu thích"}
+      aria-label={compact ? (saved ? "Bỏ lưu " : "Lưu ") + title + " vào yêu thích" : undefined}
       className={compact
         ? "flex size-11 items-center justify-center rounded-full bg-white/95 text-bep-primary-dark shadow-bep-card transition hover:scale-105"
         : "inline-flex min-h-11 items-center justify-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-primary-dark transition hover:bg-bep-primary-light"}

@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Thực đơn tuần | Bếp Nhà Mình",
   description: "Gợi ý mâm cơm gia đình theo từng ngày, với công thức bếp nhà và danh mục đi chợ dễ theo dõi.",
   alternates: { canonical: "/thuc-don-tuan" },
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    title: "Thực đơn tuần | Bếp Nhà Mình",
+    description: "Gợi ý mâm cơm gia đình theo từng ngày, với công thức bếp nhà và danh mục đi chợ dễ theo dõi.",
+    url: "/thuc-don-tuan",
+  },
 };
 
 export default async function WeeklyMenusPage() {

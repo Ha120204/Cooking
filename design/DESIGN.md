@@ -30,6 +30,8 @@ Website cộng đồng nấu ăn cá nhân, phi thương mại. Giao diện ti�
 
 Không dùng `primary` làm màu chữ trên canvas. Nút nền `primary` dùng chữ trắng. Link và chữ nhấn dùng `primary-hover`. `text-muted` chỉ dùng cho icon hoặc chữ lớn (≥18px).
 
+Với chữ xanh trên nền `secondary-light`, dùng biến thể `herb-ink` (`#367047`) để đạt tương phản AA; giữ `secondary` (`#3E7B52`) cho nền, biểu tượng và các yếu tố thương hiệu.
+
 ## Typography
 
 Font: Be Vietnam Pro qua `next/font/google`, subset `vietnamese`, weight 400/500/600/700. Fallback: Plus Jakarta Sans, system UI, Segoe UI, Roboto, sans-serif. Chừa line-height đủ cho dấu tiếng Việt.

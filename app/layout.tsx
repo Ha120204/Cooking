@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
@@ -20,7 +20,19 @@ export const metadata: Metadata = {
     "Một góc bếp Việt để cùng chia sẻ công thức, hỏi bếp và tìm cảm hứng cho bữa cơm mỗi ngày.",
   metadataBase: new URL(siteUrl),
   robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    siteName: "Bếp Nhà Mình",
+    title: "Bếp Nhà Mình | Cộng đồng nấu ăn",
+    description: "Một góc bếp Việt để cùng chia sẻ công thức, hỏi bếp và tìm cảm hứng cho bữa cơm mỗi ngày.",
+    url: siteUrl,
+  },
+  twitter: { card: "summary_large_image" },
+  appleWebApp: { capable: true, title: "Bếp Nhà Mình", statusBarStyle: "default" },
 };
+
+export const viewport: Viewport = { themeColor: "#C2542D" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

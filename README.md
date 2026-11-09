@@ -10,6 +10,8 @@ M2a và M2b đã được kiểm tra RLS trên Supabase và deploy Production t�
 
 M2b đã được kiểm tra bằng lượt gửi câu hỏi, trả lời và công thức trên Production; dữ liệu thử đã được xóa sau khi xác nhận.
 
+M3 bổ sung trang 404/trang lỗi, icon và manifest để thêm website vào màn hình chính, cùng ảnh Open Graph mặc định cho Trang chủ, Hỏi bếp và Thực đơn tuần. Ảnh OG được tạo từ `app/**/opengraph-image.tsx` bằng `ImageResponse`; font Be Vietnam Pro Bold và giấy phép OFL nằm trong `assets/fonts/`. Icon nồi dùng nét từ Lucide CookingPot; chạy `node scripts/generate-icons.mjs` để tạo lại các cỡ PNG và favicon. Báo cáo Lighthouse mobile nằm trong `reports/lighthouse/` và không được commit.
+
 ## Chạy local
 
 1. `npm install`

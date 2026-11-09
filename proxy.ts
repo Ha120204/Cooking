@@ -5,6 +5,7 @@ import { questionIdSchema } from "@/lib/validation/forum";
 
 export async function proxy(request: NextRequest) {
   const id = request.nextUrl.pathname.split("/")[2];
+  if (id === "opengraph-image") return NextResponse.next();
   if (!questionIdSchema.safeParse(id).success) {
     return NextResponse.rewrite(new URL("/_not-found", request.url), { status: 404 });
   }
