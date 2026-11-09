@@ -56,6 +56,7 @@ Font: Be Vietnam Pro qua `next/font/google`, subset `vietnamese`, weight 400/500
 - Shadow thường: `0 2px 8px rgba(38, 33, 30, 0.05)`.
 - Shadow hover: `0 8px 24px rgba(194, 84, 45, 0.12)`.
 - Focus cho mọi thành phần tương tác: `outline: 2px solid #9E3F1D; outline-offset: 2px`.
+- Riêng ô nhập bo góc: focus hiển thị trên khung bằng viền `#9E3F1D` và ring mờ; không vẽ outline vuông bên trong khung.
 - Vùng chạm tối thiểu 44×44px.
 
 ## Mẫu component
@@ -86,3 +87,5 @@ Khung bình luận có nền `surface-dim`, viền `border`, tên hiển thị v
 3. Các chỉnh sửa về tương phản, radius 12px, route điều hướng, bỏ tác giả trên card, bỏ upload ảnh là chuẩn ưu tiên.
 4. Trang chủ tạm M1a được thay bằng giao diện Stitch sau khi có export trang chủ. Không tự suy ra bố cục trang từ tài liệu design system này.
 5. Mỗi trang cần export riêng trong `design/stitch/<ten-trang>/` gồm HTML/Tailwind và ảnh chụp trước khi chuyển sang Next.js component. Trang thiếu export phải hỏi người dùng, không tự thiết kế.
+6. Ngoại lệ typography theo bản Stitch đã duyệt: hero trang chủ trên mobile dùng `32px/40px` thay vì token `h1` 24px/32px; tiêu đề món ở trang chi tiết trên mobile dùng `26px` với line-height `1.3`; nhãn MobileNav dùng `11px` để đủ bốn tab trong chiều ngang nhỏ. Các kích thước này chỉ áp dụng đúng vị trí nêu trên.
+7. Chuyển động UI dùng chung `180ms` và easing `cubic-bezier(0.2, 0.8, 0.2, 1)`; khi người dùng chọn giảm chuyển động, tắt cuộn mượt và rút ngắn animation/transition. Nút tương tác có hover, active, disabled và trạng thái đang xử lý; focus của thẻ công thức hiển thị trên toàn thẻ theo bo góc 12px.

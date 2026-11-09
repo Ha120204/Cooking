@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Clock3, CookingPot, Heart, Lightbulb, MessageCircle, Share2, Users } from "lucide-react";
+import { ArrowLeft, Clock3, CookingPot, Heart, Lightbulb, MessageCircle, Users } from "lucide-react";
 import type { Recipe, RecipeFrontmatter } from "@/lib/recipe-schema";
 import { categoryLabel, difficultyLabel } from "@/lib/recipe-schema";
 import { Header } from "@/components/layout/Header";
@@ -11,6 +11,7 @@ import { FavoriteButton } from "./FavoriteButton";
 import { RecipeStats } from "./RecipeStats";
 import { LikeButton } from "./LikeButton";
 import { RatingInput } from "./RatingInput";
+import { ShareButton } from "./ShareButton";
 import { CommentSection } from "@/components/community/CommentSection";
 import { RecipeCard } from "./RecipeCard";
 
@@ -29,7 +30,7 @@ export function RecipeDetail({ recipe, body, related }: RecipeDetailProps) {
     <Header active="recipe" />
     <main className="pt-16 lg:pt-20">
       <div className="mx-auto max-w-[1200px] px-4 pb-16 sm:px-6 lg:px-8">
-        <nav aria-label="Đường dẫn" className="flex min-h-14 items-center gap-2 text-sm text-bep-smoke"><Link href="/" className="text-bep-primary-dark hover:underline">Trang chủ</Link><span>/</span><span>Công thức</span><span>/</span><span className="truncate text-bep-ink">{recipe.title}</span></nav>
+        <nav aria-label="Đường dẫn" className="flex min-h-14 items-center gap-2 text-sm text-bep-smoke"><Link href="/" className="inline-flex min-h-11 items-center rounded-bep-sm text-bep-primary-dark hover:underline">Trang chủ</Link><span>/</span><span>Công thức</span><span>/</span><span className="truncate text-bep-ink">{recipe.title}</span></nav>
         <Link href="/cong-thuc" className="mb-4 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-bep-primary-dark"><ArrowLeft size={18} /> Quay lại danh sách công thức</Link>
 
         <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
@@ -45,7 +46,7 @@ export function RecipeDetail({ recipe, body, related }: RecipeDetailProps) {
               <div className="rounded-bep-md bg-bep-dim p-3"><CookingPot size={19} className="text-bep-herb-ink" /><p className="mt-1 text-xs text-bep-smoke">Độ khó</p><p className="text-sm font-semibold">{difficultyLabel[recipe.difficulty]}</p></div>
               <div className="rounded-bep-md bg-bep-dim p-3"><Heart size={19} className="text-bep-primary-dark" /><p className="mt-1 text-xs text-bep-smoke">Đánh giá</p><RecipeStats slug={recipe.slug} /></div>
             </div>
-            <div className="mt-5 flex flex-wrap gap-2"><FavoriteButton slug={recipe.slug} title={recipe.title} /><LikeButton slug={recipe.slug} /><button type="button" disabled title="Chia sẻ sẽ mở sau" className="inline-flex min-h-11 cursor-not-allowed items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-smoke opacity-75"><Share2 size={18} /> Chia sẻ</button></div>
+            <div className="mt-5 flex flex-wrap gap-2"><FavoriteButton slug={recipe.slug} title={recipe.title} /><LikeButton slug={recipe.slug} /><ShareButton slug={recipe.slug} title={recipe.title} description={recipe.description} /></div>
             <div className="mt-4"><RatingInput slug={recipe.slug} /></div>
             <div className="mt-4 flex flex-wrap gap-1.5">{recipe.tags.map((tag) => <span key={tag} className="rounded-bep-sm bg-bep-primary-light px-2.5 py-1 text-xs font-medium text-bep-primary-dark">#{tag.replaceAll(" ", "")}</span>)}</div>
           </div>

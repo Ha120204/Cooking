@@ -47,5 +47,5 @@ export function LikeButton({ slug }: { slug: string }) {
     }
   }
 
-  return <span><button type="button" onClick={toggle} disabled={pending} aria-pressed={liked} className="inline-flex min-h-11 items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-primary-dark disabled:opacity-60"><ThumbsUp size={18} fill={liked ? "currentColor" : "none"} /> {liked ? "Đã thích" : "Thích"} · {count}</button>{error && <span role="alert" className="ml-2 text-xs text-[#B42318]">{error}</span>}</span>;
+  return <span><button type="button" onClick={toggle} disabled={pending} aria-busy={pending} aria-pressed={liked} className="bep-action bep-action-muted inline-flex min-h-11 items-center gap-2 rounded-bep-md bg-bep-dim px-4 text-sm font-semibold text-bep-primary-dark"><ThumbsUp size={18} fill={liked ? "currentColor" : "none"} /> {pending ? "Đang lưu..." : liked ? "Đã thích" : "Thích"} · {count}</button>{error && <span role="alert" className="ml-2 text-xs text-[#B42318]">{error}</span>}</span>;
 }

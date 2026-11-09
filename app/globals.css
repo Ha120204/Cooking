@@ -25,15 +25,73 @@
   --radius-bep-lg: 16px;
   --shadow-bep-card: 0 2px 8px rgba(38, 33, 30, 0.05);
   --shadow-bep-hover: 0 8px 24px rgba(194, 84, 45, 0.12);
+  --default-transition-duration: 180ms;
+  --default-transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root {
+  --bep-motion-duration: var(--default-transition-duration);
+  --bep-motion-easing: var(--default-transition-timing-function);
 }
 
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--color-bep-canvas); color: var(--color-bep-ink); }
 button, input, textarea { font: inherit; }
 
+.bep-motion,
+.bep-action,
+.bep-recipe-card,
+.bep-recipe-card img {
+  transition-duration: var(--bep-motion-duration);
+  transition-timing-function: var(--bep-motion-easing);
+}
+
+.bep-action {
+  transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+}
+.bep-action:not(:disabled):active { transform: scale(0.98); }
+.bep-action:disabled { cursor: not-allowed; opacity: 0.6; }
+.bep-action-primary:not(:disabled):hover { background-color: var(--color-bep-primary-dark); }
+.bep-action-muted:not(:disabled):hover { background-color: var(--color-bep-primary-light); }
+
+.bep-recipe-card {
+  transition-property: box-shadow, transform;
+}
+.bep-recipe-card:active { transform: scale(0.99); }
+.bep-recipe-card:focus-within {
+  box-shadow: 0 0 0 2px var(--color-bep-primary-dark), var(--shadow-bep-hover);
+}
+.bep-recipe-card a:focus-visible { outline: none; }
+
 :where(a, button, input, textarea, select, [tabindex]):focus-visible {
   outline: 2px solid var(--color-bep-primary-dark);
   outline-offset: 2px;
+}
+
+.bep-field,
+.bep-field-frame {
+  transition: border-color var(--bep-motion-duration) var(--bep-motion-easing),
+    box-shadow var(--bep-motion-duration) var(--bep-motion-easing);
+}
+
+.bep-field:focus-within,
+.bep-field-frame:focus-within {
+  border-color: var(--color-bep-primary-dark);
+  box-shadow: 0 0 0 3px rgb(158 63 29 / 0.18);
+}
+
+.bep-field:focus-visible,
+.bep-field-frame :is(input, textarea):focus-visible {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .recipe-prose h2 {

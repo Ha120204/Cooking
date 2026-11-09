@@ -61,12 +61,12 @@ export function CommentSection({ targetType, slug, intro }: { targetType: Commen
     </div>
     <form onSubmit={submit} className="mt-5 grid gap-3">
       <label htmlFor={`${targetType}-${slug}-name`} className="text-sm font-semibold">Tên hiển thị</label>
-      <input id={`${targetType}-${slug}-name`} value={name} onChange={(event) => setName(event.target.value)} required minLength={2} maxLength={60} placeholder="Tên của bạn" className="min-h-11 rounded-bep-md border border-bep-border bg-bep-dim px-4" />
+      <input id={`${targetType}-${slug}-name`} value={name} onChange={(event) => setName(event.target.value)} required minLength={2} maxLength={60} placeholder="Tên của bạn" className="bep-field min-h-11 rounded-bep-md border border-bep-border bg-bep-dim px-4" />
       <label htmlFor={`${targetType}-${slug}-body`} className="text-sm font-semibold">Lời chia sẻ</label>
-      <textarea id={`${targetType}-${slug}-body`} value={body} onChange={(event) => setBody(event.target.value)} required minLength={2} maxLength={2000} rows={4} placeholder="Bạn đã nấu món này thế nào?" className="rounded-bep-md border border-bep-border bg-bep-dim p-4" />
+      <textarea id={`${targetType}-${slug}-body`} value={body} onChange={(event) => setBody(event.target.value)} required minLength={2} maxLength={2000} rows={4} placeholder="Bạn đã nấu món này thế nào?" className="bep-field rounded-bep-md border border-bep-border bg-bep-dim p-4" />
       <div className="absolute -left-[10000px]" aria-hidden="true"><label htmlFor={`${targetType}-${slug}-website`}>Website</label><input id={`${targetType}-${slug}-website`} tabIndex={-1} autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} /></div>
       {error && <p role="alert" className="text-sm text-[#B42318]">{error}</p>}
-      <button type="submit" disabled={sending} className="min-h-11 w-fit rounded-bep-md bg-bep-primary px-5 font-semibold text-white disabled:opacity-60">{sending ? "Đang gửi..." : "Gửi bình luận"}</button>
+      <button type="submit" disabled={sending} aria-busy={sending} className="bep-action bep-action-primary min-h-11 w-fit rounded-bep-md bg-bep-primary px-5 font-semibold text-white">{sending ? "Đang gửi..." : "Gửi bình luận"}</button>
     </form>
   </div>;
 }

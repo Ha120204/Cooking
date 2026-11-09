@@ -10,7 +10,7 @@ type RecipeCardProps = { recipe: RecipeFrontmatter; compact?: boolean; eagerImag
 
 export function RecipeCard({ recipe, compact = false, eagerImage = false }: RecipeCardProps) {
   return (
-    <article className={"group overflow-hidden rounded-bep-md bg-bep-surface shadow-bep-card transition hover:shadow-bep-hover " + (compact ? "flex items-center" : "flex flex-col")}>
+    <article className={"bep-recipe-card group overflow-hidden rounded-bep-md bg-bep-surface shadow-bep-card hover:shadow-bep-hover " + (compact ? "flex items-center" : "flex flex-col")}>
       <div className={"relative shrink-0 overflow-hidden bg-bep-dim " + (compact ? "h-28 w-28 sm:h-32 sm:w-36" : "aspect-[4/3] w-full")}>
         <Link href={"/cong-thuc/" + recipe.slug} aria-label={"Xem công thức " + recipe.title} className="block size-full">
           <Image
@@ -20,13 +20,13 @@ export function RecipeCard({ recipe, compact = false, eagerImage = false }: Reci
             loading={eagerImage ? "eager" : "lazy"}
             fetchPriority={eagerImage ? "high" : undefined}
             sizes={compact ? "144px" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"}
-            className="object-cover transition duration-500 group-hover:scale-105"
+            className="object-cover transition-transform group-hover:scale-105"
           />
         </Link>
         {!compact && <div className="absolute right-3 top-3"><FavoriteButton slug={recipe.slug} title={recipe.title} compact /></div>}
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-2 p-4">
-        <Link href={"/cong-thuc/" + recipe.slug} className="text-lg font-semibold leading-[1.4] text-bep-ink transition hover:text-bep-primary-dark">
+        <Link href={"/cong-thuc/" + recipe.slug} className="bep-motion inline-flex min-h-11 items-center text-lg font-semibold leading-[1.4] text-bep-ink transition-colors hover:text-bep-primary-dark">
           {recipe.title}
         </Link>
         {!compact && <p className="line-clamp-2 text-sm leading-[1.5] text-bep-smoke">{recipe.description}</p>}
